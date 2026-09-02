@@ -86,7 +86,11 @@
     gap: 14px;
 }
 
+/* Each card paints from --tone; data-tone swaps it. Daily leaves it alone and
+   so follows the catalogue skin. */
 .card {
+    --tone: var(--accent);
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -95,21 +99,29 @@
     padding: 18px 16px 16px;
     background: var(--black-soft);
     border: 2px solid var(--line-on-black);
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--tone);
     color: var(--bone);
     text-decoration: none;
     transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
+.card[data-tone="violet"] {
+    --tone: var(--violet);
+}
+
+.card[data-tone="sky"] {
+    --tone: var(--sky);
+}
+
 .card:hover {
     transform: translateY(-4px);
-    border-color: var(--accent);
+    border-color: var(--tone);
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
 }
 
 .cardIcon {
     display: flex;
-    color: var(--accent);
+    color: var(--tone);
 }
 
 .cardTop {
@@ -124,7 +136,7 @@
     font-size: 1.25rem;
     text-transform: uppercase;
     line-height: 1;
-    color: var(--accent);
+    color: var(--tone);
 }
 
 .cardTag {
@@ -152,7 +164,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--accent);
+    color: var(--tone);
 }
 
 .cardCta em {
@@ -193,6 +205,14 @@
     font-size: 1.15rem;
     line-height: 1;
     color: var(--bone);
+}
+
+.fact[data-tone="gold"] b {
+    color: var(--gold);
+}
+
+.fact[data-tone="violet"] b {
+    color: var(--violet);
 }
 
 .fact span {

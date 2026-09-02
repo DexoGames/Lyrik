@@ -50,16 +50,29 @@ const FOLD = new Map(
   }),
 );
 
-/** Latin letters (incl. accented), digits and the apostrophe survive tokenising. */
-const KEEP_IN_WORD = /[^\p{L}\p{N}']/gu;
+/** Latin letters (incl. accented), digits, the apostrophe and hyphen survive tokenising. */
+const KEEP_IN_WORD = /[^\p{L}\p{N}'-]/gu;
 
 const DEFAULTS = {
-  /** Fold "don't" to "dont". The game promises *no* punctuation, so: yes. */
-  stripApostrophes: true,
+  /**
+   * Fold "don't" to "dont". The game promises no *sentence* punctuation
+   * (commas, full stops, question marks, colons) — apostrophes are part of
+   * the word itself, so they stay by default.
+   */
+  stripApostrophes: false,
   /** Strip accents so "où" matches a plain-keyboard guess. */
   foldAccents: true,
   /** Songs shorter than this are not worth playing. */
   minWords: 40,
+  /**
+   * Lyric databases carry translated and transliterated takes alongside the
+   * original, and a search can land on one. Anything not in Latin script is
+   * unplayable here — you type the title on a plain keyboard — so require
+   * nearly all of the letters to survive accent-folding as a-z. Spanish,
+   * French and German lyrics pass at 1.0; a Japanese or Mongolian take scores
+   * near zero.
+   */
+  minLatin: 0.9,
 };
 
 /** Unicode-fold, straighten quotes, kill zero-widths. */
@@ -72,6 +85,19 @@ export function foldText(input) {
 /** Strip diacritics: "Michèle" -> "Michele". */
 export function foldAccents(s) {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
+/**
+ * What share of the letters are plain a-z once accents are folded — 1 for any
+ * language written in the Latin alphabet, ~0 for one that is not. Text with no
+ * letters at all counts as 0.
+ */
+export function latinShare(text) {
+  const letters = foldAccents(String(text ?? "")).match(/\p{L}/gu);
+  if (!letters || letters.length === 0) return 0;
+  let latin = 0;
+  for (const ch of letters) if (/[a-zA-Z]/.test(ch)) latin++;
+  return latin / letters.length;
 }
 
 /**
@@ -111,13 +137,18 @@ export function cleanLyrics(raw, opts = {}) {
   // a line ended, which is the whole point.
   let flat = kept.join(" ");
   if (o.foldAccents) flat = foldAccents(flat);
-  flat = flat.toLowerCase().replace(/[-/\\_]+/g, " ");
+  // Slashes and underscores are always separators; a hyphen might instead be
+  // holding a compound word ("well-known") together, so it survives into
+  // per-token cleanup below rather than being forced apart here.
+  flat = flat.toLowerCase().replace(/[/\\_]+/g, " ");
 
   const words = [];
   for (const token of flat.split(/\s+/)) {
     let w = token.replace(KEEP_IN_WORD, "");
-    // Apostrophes only ever survive *inside* a word, never at the edges.
-    w = w.replace(/^'+|'+$/g, "");
+    // Apostrophes and hyphens only ever survive *inside* a word — a lone
+    // "-" (a dash used as a pause) or a leading/trailing stray is punctuation,
+    // not part of a word, so it's trimmed off the edges rather than kept.
+    w = w.replace(/^['-]+|['-]+$/g, "");
     if (o.stripApostrophes) w = w.replace(/'/g, "");
     if (!w || !/[\p{L}\p{N}]/u.test(w)) continue;
     words.push(w);
@@ -132,6 +163,18 @@ export function cleanLyrics(raw, opts = {}) {
       reason: `only ${words.length} words (need ${o.minWords})`,
     };
   }
+
+  const latin = latinShare(words.join(" "));
+  if (latin < o.minLatin) {
+    return {
+      words,
+      lines: kept.length,
+      dropped,
+      ok: false,
+      reason: `not Latin script (${Math.round(latin * 100)}% a-z) — probably a translated take`,
+    };
+  }
+
   return { words, lines: kept.length, dropped, ok: true };
 }
 

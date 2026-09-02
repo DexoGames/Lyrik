@@ -62,25 +62,72 @@ function newRound(song: Song, rand: () => number): Round {
   return { songId: song.id, seed, snippet: seed, guesses: [], status: "playing", score: 0 };
 }
 
-/** Deterministic shuffle — the daily must be identical for everyone. */
-function shuffled<T>(items: T[], rand: () => number): T[] {
-  const a = [...items];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 /** Songs long enough that a 6-word window always has somewhere to sit. */
 function playable(set: SongSet): Song[] {
   return set.songs.filter((s) => s.words.length >= MIN_WORDS * 3);
 }
 
+/**
+ * The least-familiar song is still drawn this often relative to the most
+ * familiar one — rarities should come up less in endless mode, not almost
+ * never.
+ */
+const RARITY_MIN_WEIGHT = 0.25;
+
+function familiarityWeight(song: Song): number {
+  return RARITY_MIN_WEIGHT + (song.familiarity / 100) * (1 - RARITY_MIN_WEIGHT);
+}
+
+/** Weighted-random pick, favouring more familiar songs without ruling rarities out. */
+function pickWeighted(pool: Song[], rand: () => number): Song {
+  const weights = pool.map(familiarityWeight);
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = rand() * total;
+  for (let i = 0; i < pool.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return pool[i];
+  }
+  return pool[pool.length - 1];
+}
+
 function pickRandomId(set: SongSet, exclude: Set<string>, rand: () => number): string {
   const pool = playable(set).filter((s) => !exclude.has(s.id));
   const from = pool.length > 0 ? pool : playable(set);
-  return from[Math.floor(rand() * from.length)].id;
+  return pickWeighted(from, rand).id;
+}
+
+/**
+ * Daily's five rounds move from the hits to the rarities: a couple of
+ * well-known songs to open, a couple of deeper cuts through the middle, and
+ * one genuinely niche closer. Tiers are cut by percentile rather than a fixed
+ * familiarity threshold, so the curve holds regardless of catalogue size.
+ */
+function dailyQueue(set: SongSet, rand: () => number): string[] {
+  const bySongFamiliarity = [...playable(set)].sort((a, b) => b.familiarity - a.familiarity);
+  const n = bySongFamiliarity.length;
+  const hitsEnd = Math.min(n, Math.max(1, Math.round(n * 0.4)));
+  const deepCutsEnd = Math.min(n, Math.max(hitsEnd + 1, Math.round(n * 0.8)));
+  const tiers = [
+    bySongFamiliarity.slice(0, hitsEnd),
+    bySongFamiliarity.slice(hitsEnd, deepCutsEnd),
+    bySongFamiliarity.slice(deepCutsEnd),
+  ];
+  const tierForRound = (i: number) => {
+    if (i < Math.ceil(DAILY_ROUNDS * 0.4)) return tiers[0];
+    if (i < Math.ceil(DAILY_ROUNDS * 0.8)) return tiers[1];
+    return tiers[2];
+  };
+
+  const used = new Set<string>();
+  const chosen: string[] = [];
+  for (let i = 0; i < DAILY_ROUNDS; i++) {
+    const tier = tierForRound(i).filter((s) => !used.has(s.id));
+    const from = tier.length > 0 ? tier : bySongFamiliarity.filter((s) => !used.has(s.id));
+    const pick = from[Math.floor(rand() * from.length)];
+    used.add(pick.id);
+    chosen.push(pick.id);
+  }
+  return chosen;
 }
 
 /** Seeds are namespaced by catalogue, so each artist has its own daily. */
@@ -107,9 +154,7 @@ export function startGame(mode: Mode, set: SongSet, now = new Date()): GameState
   if (mode === "daily") {
     const dayKey = ymd(now);
     const rand = seededRandom(dailySeed(set.id, dayKey));
-    const queue = shuffled(playable(set), rand)
-      .slice(0, DAILY_ROUNDS)
-      .map((s) => s.id);
+    const queue = dailyQueue(set, rand);
     const song = set.byId.get(queue[0])!;
     return {
       ...base,

@@ -18,7 +18,7 @@
 import { readFile, writeFile, mkdir, readdir, access } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { normalizeTitle, slugify } from "./lib/clean.mjs";
+import { latinShare, normalizeTitle, slugify } from "./lib/clean.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_DIR = join(ROOT, "data", "catalogue");
@@ -51,20 +51,29 @@ async function getJSON(url, timeoutMs = 15000) {
   }
 }
 
-/** LRCLIB: pick the best plain-lyrics hit for artist + title. */
-async function fromLrclib(artist, title) {
-  const url =
-    "https://lrclib.net/api/search?artist_name=" +
-    encodeURIComponent(artist) +
-    "&track_name=" +
-    encodeURIComponent(title);
-  const hits = await getJSON(url);
+/** Does this hit sit on the release we asked for? */
+function onAlbum(hit, album) {
+  const want = normalizeTitle(album ?? "");
+  return want.length > 0 && normalizeTitle(hit.albumName ?? "").includes(want);
+}
+
+/**
+ * One LRCLIB search, scored. `want.requireAlbum` throws away anything not on
+ * the release we asked for — the price of searching by title alone.
+ */
+async function searchLrclib(params, want) {
+  const hits = await getJSON("https://lrclib.net/api/search?" + new URLSearchParams(params));
   if (!Array.isArray(hits) || hits.length === 0) return null;
 
-  const wantTitle = normalizeTitle(title);
-  const wantArtist = normalizeTitle(artist);
+  const wantTitle = normalizeTitle(want.title);
+  const wantArtist = normalizeTitle(want.artist);
   const scored = hits
     .filter((h) => h && typeof h.plainLyrics === "string" && h.plainLyrics.trim() && !h.instrumental)
+    .filter((h) => !want.requireAlbum || onAlbum(h, want.album))
+    // A lyric database files translated takes under the original title, and
+    // for a show tune they routinely outrank it. Never usable here, so drop
+    // them outright rather than scoring them down — a penalty only ties.
+    .filter((h) => latinShare(h.plainLyrics) >= 0.9)
     .map((h) => {
       const t = normalizeTitle(h.trackName ?? "");
       const a = normalizeTitle(h.artistName ?? "");
@@ -74,6 +83,9 @@ async function fromLrclib(artist, title) {
       else if (t.includes(wantTitle)) score += 1;
       if (a === wantArtist) score += 4;
       else if (a.includes(wantArtist)) score += 2;
+      // Being on the right record is the strongest signal there is for a cast
+      // recording, where the credit is never spelled the same way twice.
+      if (onAlbum(h, want.album)) score += 4;
       // Live/demo/remix takes are noisier than the studio cut.
       if (/\b(live|demo|take \d|rehearsal|remix|karaoke|instrumental)\b/i.test(h.trackName ?? "")) score -= 5;
       return { h, score };
@@ -82,6 +94,18 @@ async function fromLrclib(artist, title) {
     .sort((a, b) => b.score - a.score);
 
   return scored[0]?.h?.plainLyrics ?? null;
+}
+
+/** LRCLIB: the best plain-lyrics hit for a track, however it is credited. */
+async function fromLrclib(artist, title, album) {
+  const text = await searchLrclib({ artist_name: artist, track_name: title }, { artist, title, album });
+  if (text) return text;
+
+  // Nothing under that credit. A cast recording is filed a dozen different
+  // ways, so widen to the title alone — but then insist on the right album,
+  // or "Hello!" comes back as Adele's.
+  await sleep(DELAY_MS);
+  return searchLrclib({ track_name: title }, { artist, title, album, requireAlbum: true });
 }
 
 /** lyrics.ovh fallback. */
@@ -108,13 +132,16 @@ async function main() {
   let attempted = 0;
 
   for (const cat of catalogues) {
-    const artist = cat.artist;
-    const artistSlug = cat.slug ?? slugify(artist);
+    const artistSlug = cat.slug ?? slugify(cat.artist);
     const skip = new Set((cat.skip ?? []).map(normalizeTitle));
     const outDir = join(RAW_DIR, artistSlug);
     await mkdir(outDir, { recursive: true });
 
     for (const release of cat.releases) {
+      // A catalogue that is a collection rather than one act (musicals, say)
+      // credits each release to whoever recorded it; everyone else inherits.
+      const artist = release.artist ?? cat.artist;
+
       for (const title of release.tracks) {
         if (skip.has(normalizeTitle(title))) continue;
         if (ONLY && !`${release.album} ${title}`.toLowerCase().includes(ONLY)) continue;
@@ -130,7 +157,7 @@ async function main() {
         if (attempted >= LIMIT) continue;
         attempted++;
 
-        let text = await fromLrclib(artist, title);
+        let text = await fromLrclib(artist, title, release.album);
         let source = "lrclib";
         if (!text) {
           await sleep(DELAY_MS);

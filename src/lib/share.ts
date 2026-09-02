@@ -28,7 +28,7 @@ export function buildDailyShare(
 ): string {
   const grid = results.map(cell).join(" ");
   return (
-    `Lyrik · ${catalogue.name} #${puzzleNo} — ${score}/${DAILY_MAX}\n` +
+    `Lyrik · ${catalogue.name} #${puzzleNo} - ${score}/${DAILY_MAX}\n` +
     `${grid}\n` +
     `https://${SITE}/${catalogue.id}`
   );
@@ -41,7 +41,7 @@ export function buildRunShare(
   bestStreak: number,
 ): string {
   return (
-    `Lyrik · ${catalogue.name} — endless\n` +
+    `Lyrik · ${catalogue.name} - endless\n` +
     `${solved} song${solved === 1 ? "" : "s"} · ${score} pts · best streak ${bestStreak}\n` +
     `https://${SITE}/${catalogue.id}`
   );

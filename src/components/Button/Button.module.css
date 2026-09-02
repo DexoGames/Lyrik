@@ -1,4 +1,10 @@
 .btn {
+    /* Every variant paints from these three, so a button changes colour by
+       swapping its tone rather than by growing another variant. */
+    --tone: var(--accent);
+    --tone-deep: var(--accent-deep);
+    --tone-ink: var(--accent-ink);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -29,19 +35,46 @@
     font-size: 0.86rem;
 }
 
+/* --- tones: the same across every catalogue skin, so a shared action keeps
+   its colour whichever artist you are inside. `accent` is the default and is
+   the only one that follows the skin. --- */
+.sky {
+    --tone: var(--sky);
+    --tone-deep: var(--sky-deep);
+    --tone-ink: var(--sky-ink);
+}
+
+.violet {
+    --tone: var(--violet);
+    --tone-deep: var(--violet-deep);
+    --tone-ink: var(--violet-ink);
+}
+
+.teal {
+    --tone: var(--teal);
+    --tone-deep: var(--teal-deep);
+    --tone-ink: var(--teal-ink);
+}
+
+.gold {
+    --tone: var(--gold);
+    --tone-deep: var(--gold-deep);
+    --tone-ink: var(--gold-ink);
+}
+
 .primary {
-    background: var(--accent);
-    color: var(--accent-ink);
-    border-color: var(--accent);
+    background: var(--tone);
+    color: var(--tone-ink);
+    border-color: var(--tone);
 }
 
 .primary:hover {
-    background: var(--accent-deep);
-    border-color: var(--accent-deep);
+    background: var(--tone-deep);
+    border-color: var(--tone-deep);
 }
 
-/* Neutral outline — the accent is reserved for the one primary action on
-   screen, so secondary actions read as quieter rather than a second accent. */
+/* Neutral outline — for the quiet action beside a coloured one, where a second
+   hue would just be noise. */
 .secondary {
     color: var(--bone);
     border-color: var(--line-strong);
@@ -53,6 +86,17 @@
     border-color: var(--bone);
 }
 
+/* Outline in the tone: as loud as secondary, but it says which action it is. */
+.outline {
+    color: var(--tone);
+    border-color: var(--tone);
+}
+
+.outline:hover {
+    background: var(--tone);
+    color: var(--tone-ink);
+}
+
 .ghost {
     color: var(--bone-dim);
     border-color: transparent;
@@ -60,7 +104,7 @@
 }
 
 .ghost:hover {
-    color: var(--bone);
+    color: var(--tone);
 }
 
 .danger {

@@ -24,11 +24,14 @@ The game is two levels deep.
 /the-beatles/daily      play
 /the-beatles/run
 /the-beatles/practice
+/musicals               …and the same three inside every other catalogue
 ```
 
-A **catalogue** is one artist's body of released work. It owns its songs, its
-colour scheme, its wording and its records — a Beatles streak says nothing about
-anyone else's. Inside a catalogue sit the three modes:
+A **catalogue** is one body of work. It owns its songs, its colour scheme, its
+wording and its records — a Beatles streak says nothing about anyone else's.
+Usually that is one artist (**The Beatles**); it can equally be a collection
+with a theme (**Musicals** — Broadway, the West End and the Disney songbook,
+each show credited to its own cast). Inside a catalogue sit the three modes:
 
 | Mode | Shape |
 | --- | --- |
@@ -65,6 +68,31 @@ Three steps, no engine changes.
 Then `npm run songs` to fetch and build. The `slug` becomes the catalogue id and
 the URL segment.
 
+A release may carry its own `"artist"`, which overrides the catalogue's for
+both the lyric search and the credit shown on screen. That is what makes a
+catalogue like Musicals possible — one shelf, one skin, but each show looked up
+under the cast that recorded it:
+
+```json
+{ "album": "Hamilton", "artist": "Hamilton", "year": 2015, "tracks": ["My Shot"] }
+```
+
+Titles must be unique *within* a catalogue: the raw lyric file is keyed by
+`<catalogue-slug>/<title-slug>`, so two shows sharing a song title would collide
+on disk.
+
+An optional top-level `"familiarity"` map scores how well-known each track is,
+0-100, keyed by the exact title string:
+
+```json
+{ "familiarity": { "Song One": 90, "Song Two": 15 } }
+```
+
+It's a hidden score — never shown to the player — that drives the daily's
+hits-to-rarities curve (opens on the well-known, closes on a deep cut) and
+tilts endless mode's draws toward more familiar songs without ruling rarities
+out. A title left out of the map defaults to a neutral 50.
+
 **2. The personality.** Add `src/catalogues/<artist>.tsx` exporting a
 `CatalogueDef` — theme class, wording and a motif. Everything is optional except
 the identity: spread `DEFAULT_COPY` and override only the lines worth giving a
@@ -91,6 +119,14 @@ Add a matching `.theme-artist` block in `src/styles/globals.css` — four custom
 properties (`--accent`, `--accent-deep`, `--accent-ink`, `--accent-soft`) plus
 `--glow`. Every component reads those, so the nav rule, buttons, highlighter
 swipe and background wash all follow.
+
+Not everything follows the skin, deliberately. `--sky`, `--violet`, `--teal`
+and `--gold` are fixed across every catalogue, and the things that are the same
+game whoever you are playing wear them: Endless is violet, Practice is sky,
+Share is teal, streaks are gold, the way out to dexo.games is sky. So a screen
+is never one colour top to bottom, and a mode is recognisable before you read
+it. `<Button tone="teal">` is how a button opts in; `variant="outline"` draws
+the same tone as an outline instead of a fill.
 
 **3. Register it** in `src/catalogues/index.ts`.
 
@@ -162,7 +198,7 @@ Re-run it after changing the palette.
 
 ```
 data/
-  catalogue/        titles/albums/years (committed)
+  catalogue/        titles/albums/years, one file per catalogue (committed)
   raw/              fetched lyric text  (git-ignored)
 scripts/
   lib/clean.mjs     the general-purpose lyric cleaner
@@ -171,7 +207,7 @@ scripts/
   build-songs.mjs   data/raw   -> public/data/songs.json
   make-assets.mjs   icons + OG card
 src/
-  catalogues/       ONE FILE PER ARTIST — theme, wording, motif
+  catalogues/       ONE FILE PER CATALOGUE — theme, wording, motif
   game/
     engine.ts       pure reducer: reveals, guesses, lives, round flow
     scoring.ts      THE RULES — word/guess values live here

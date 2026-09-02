@@ -95,7 +95,13 @@ export function GameOver({ state, catalogue, titles, onRestart, onStats }: Props
       </div>
 
       <div className={styles.actions}>
-        <Button variant="primary" size="lg" onClick={onShare} className={styles.wide}>
+        <Button
+          variant="primary"
+          tone="teal"
+          size="lg"
+          onClick={onShare}
+          className={styles.wide}
+        >
           <IconShare size={15} />
           {copied === "copied"
             ? "Copied!"
@@ -107,7 +113,8 @@ export function GameOver({ state, catalogue, titles, onRestart, onStats }: Props
         </Button>
         {isDaily ? (
           <Button
-            variant="secondary"
+            variant="outline"
+            tone="violet"
             href={`/${catalogue.id}/run`}
             external={false}
             className={styles.wide}
@@ -115,7 +122,7 @@ export function GameOver({ state, catalogue, titles, onRestart, onStats }: Props
             Play endless
           </Button>
         ) : (
-          <Button variant="secondary" onClick={onRestart} className={styles.wide}>
+          <Button variant="outline" tone="violet" onClick={onRestart} className={styles.wide}>
             <IconRefresh size={15} />
             New run
           </Button>

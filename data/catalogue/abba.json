@@ -1,0 +1,206 @@
+{
+  "artist": "ABBA",
+  "slug": "abba",
+  "note": "Every song on ABBA Gold: Greatest Hits (Deluxe Edition) — both discs — plus the one Mamma Mia! movie soundtrack number Gold left off, plus a handful of fan-favourite deep cuts Gold never had room for. Each entry is the original studio recording, filed under the album (or single) it actually came from, not the compilation.",
+  "skip": [],
+  "releases": [
+    {
+      "album": "Ring Ring",
+      "year": 1973,
+      "tracks": [
+        "Ring Ring"
+      ]
+    },
+    {
+      "album": "Waterloo",
+      "year": 1974,
+      "tracks": [
+        "Waterloo",
+        "Honey, Honey"
+      ]
+    },
+    {
+      "album": "ABBA",
+      "year": 1975,
+      "tracks": [
+        "Mamma Mia",
+        "SOS",
+        "I Do, I Do, I Do, I Do, I Do",
+        "So Long",
+        "Hey, Hey Helen"
+      ]
+    },
+    {
+      "album": "Fernando (single)",
+      "year": 1976,
+      "tracks": [
+        "Fernando"
+      ]
+    },
+    {
+      "album": "Arrival",
+      "year": 1976,
+      "tracks": [
+        "Dancing Queen",
+        "Knowing Me, Knowing You",
+        "Money, Money, Money",
+        "When I Kissed the Teacher",
+        "My Love, My Life"
+      ]
+    },
+    {
+      "album": "ABBA: The Album",
+      "year": 1977,
+      "tracks": [
+        "Take a Chance on Me",
+        "Eagle",
+        "I Wonder (Departure)",
+        "The Name of the Game",
+        "Thank You for the Music",
+        "Hole in Your Soul"
+      ]
+    },
+    {
+      "album": "Summer Night City (single)",
+      "year": 1978,
+      "tracks": [
+        "Summer Night City"
+      ]
+    },
+    {
+      "album": "Chiquitita (single)",
+      "year": 1979,
+      "tracks": [
+        "Lovelight"
+      ]
+    },
+    {
+      "album": "Voulez-Vous",
+      "year": 1979,
+      "tracks": [
+        "Voulez-Vous",
+        "Chiquitita",
+        "I Have a Dream",
+        "Angeleyes",
+        "Does Your Mother Know",
+        "Tiger",
+        "If It Wasn't for the Nights"
+      ]
+    },
+    {
+      "album": "Gimme! Gimme! Gimme! (A Man After Midnight) (single)",
+      "year": 1979,
+      "tracks": [
+        "Gimme! Gimme! Gimme! (A Man After Midnight)"
+      ]
+    },
+    {
+      "album": "Super Trouper",
+      "year": 1980,
+      "tracks": [
+        "Super Trouper",
+        "The Winner Takes It All",
+        "Lay All Your Love on Me",
+        "Our Last Summer",
+        "On and On and On",
+        "The Way Old Friends Do",
+        "Andante, Andante"
+      ]
+    },
+    {
+      "album": "The Visitors",
+      "year": 1981,
+      "tracks": [
+        "The Visitors",
+        "One of Us",
+        "Head Over Heels",
+        "When All Is Said and Done",
+        "Slipping Through My Fingers",
+        "Soldiers",
+        "Like an Angel Passing Through My Room"
+      ]
+    },
+    {
+      "album": "The Day Before You Came (single)",
+      "year": 1982,
+      "tracks": [
+        "The Day Before You Came",
+        "Cassandra"
+      ]
+    },
+    {
+      "album": "Under Attack (single)",
+      "year": 1982,
+      "tracks": [
+        "Under Attack"
+      ]
+    },
+    {
+      "album": "More ABBA Gold: More ABBA Hits",
+      "year": 1993,
+      "tracks": [
+        "I Am the City"
+      ]
+    },
+    {
+      "album": "Voyage",
+      "year": 2021,
+      "tracks": [
+        "I Still Have Faith in You",
+        "Don't Shut Me Down"
+      ]
+    }
+  ],
+  "familiarity": {
+    "Ring Ring": 35,
+    "Waterloo": 93,
+    "Honey, Honey": 45,
+    "Mamma Mia": 97,
+    "SOS": 90,
+    "I Do, I Do, I Do, I Do, I Do": 76,
+    "So Long": 20,
+    "Fernando": 88,
+    "Dancing Queen": 100,
+    "Knowing Me, Knowing You": 82,
+    "Money, Money, Money": 90,
+    "When I Kissed the Teacher": 25,
+    "Take a Chance on Me": 87,
+    "Eagle": 30,
+    "I Wonder (Departure)": 15,
+    "The Name of the Game": 78,
+    "Thank You for the Music": 72,
+    "Summer Night City": 55,
+    "Lovelight": 12,
+    "Voulez-Vous": 75,
+    "Chiquitita": 87,
+    "I Have a Dream": 78,
+    "Angeleyes": 58,
+    "Does Your Mother Know": 80,
+    "Gimme! Gimme! Gimme! (A Man After Midnight)": 89,
+    "Super Trouper": 83,
+    "The Winner Takes It All": 92,
+    "Lay All Your Love on Me": 80,
+    "Our Last Summer": 60,
+    "On and On and On": 42,
+    "The Way Old Friends Do": 18,
+    "The Visitors": 28,
+    "One of Us": 75,
+    "Head Over Heels": 45,
+    "When All Is Said and Done": 40,
+    "Slipping Through My Fingers": 55,
+    "The Day Before You Came": 50,
+    "Cassandra": 15,
+    "Under Attack": 35,
+    "I Am the City": 5,
+    "Hey, Hey Helen": 38,
+    "My Love, My Life": 42,
+    "Hole in Your Soul": 40,
+    "Tiger": 42,
+    "If It Wasn't for the Nights": 45,
+    "Andante, Andante": 48,
+    "Soldiers": 38,
+    "Like an Angel Passing Through My Room": 40,
+    "I Still Have Faith in You": 68,
+    "Don't Shut Me Down": 62
+  }
+}

@@ -1,4 +1,6 @@
+import { ABBA } from "./abba";
 import { BEATLES } from "./beatles";
+import { MUSICALS } from "./musicals";
 import type { CatalogueDef } from "./types";
 
 /**
@@ -12,7 +14,7 @@ import type { CatalogueDef } from "./types";
  * A catalogue with no songs built yet still lists, marked as not ready, so a
  * half-finished addition never breaks the hub.
  */
-export const CATALOGUES: readonly CatalogueDef[] = [BEATLES];
+export const CATALOGUES: readonly CatalogueDef[] = [BEATLES, MUSICALS, ABBA];
 
 export const DEFAULT_CATALOGUE = CATALOGUES[0];
 

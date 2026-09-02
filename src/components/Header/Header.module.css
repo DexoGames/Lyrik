@@ -88,7 +88,38 @@
 .tools {
     justify-self: end;
     display: flex;
+    align-items: center;
     gap: 2px;
+}
+
+/* Back to the family. Sky rather than the accent: it belongs to dexo.games, not
+   to whichever catalogue happens to be open. */
+.home {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-right: 6px;
+    padding: 6px 8px;
+    border: 1px solid var(--line-on-black);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sky);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.home:hover {
+    background: var(--sky);
+    border-color: var(--sky);
+    color: var(--sky-ink);
+}
+
+.homeArrow {
+    font-size: 0.7em;
 }
 
 .icon {
@@ -128,5 +159,17 @@
 
     .icon {
         padding: 7px 5px;
+    }
+
+    /* keep the way out, drop the half of it that is implied */
+    .home {
+        margin-right: 3px;
+        padding: 5px 6px;
+        font-size: 0.55rem;
+        letter-spacing: 0.04em;
+    }
+
+    .homeLong {
+        display: none;
     }
 }

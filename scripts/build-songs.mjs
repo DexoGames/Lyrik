@@ -28,30 +28,41 @@ const value = (n) => args.find((a) => a.startsWith(`--${n}=`))?.split("=")[1];
 const VERBOSE = args.includes("--verbose");
 const MIN_WORDS = Number(value("min-words") ?? 40);
 
-/** Title/album/year for every catalogued track, keyed by "<artistSlug>/<titleSlug>". */
+/**
+ * Title/album/year for every catalogued track, keyed by "<artistSlug>/<titleSlug>",
+ * plus each catalogue's familiarity map keyed by artistSlug — kept separate from
+ * `index` because familiarity can cover a song that isn't (yet) in any release.
+ */
 async function catalogueIndex() {
   const index = new Map();
+  const familiarityByArtist = new Map();
   let files = [];
   try {
     files = (await readdir(CATALOGUE_DIR)).filter((f) => f.endsWith(".json"));
   } catch {
-    return index;
+    return { index, familiarityByArtist };
   }
   for (const f of files) {
     const cat = JSON.parse(await readFile(join(CATALOGUE_DIR, f), "utf8"));
     const artistSlug = cat.slug ?? slugify(cat.artist);
+    if (cat.familiarity) familiarityByArtist.set(artistSlug, cat.familiarity);
     for (const release of cat.releases ?? []) {
       for (const title of release.tracks) {
         index.set(`${artistSlug}/${slugify(title)}`, {
           title,
-          artist: cat.artist,
+          // Per-release credit, for catalogues that are a collection rather
+          // than one act; the catalogue's own name is the fallback.
+          artist: release.artist ?? cat.artist,
           album: release.album,
           year: release.year,
+          // How well-known the song is, 0-100 — see cat.familiarity. Falls
+          // back to a neutral middle score for anything left unscored.
+          familiarity: cat.familiarity?.[title] ?? 50,
         });
       }
     }
   }
-  return index;
+  return { index, familiarityByArtist };
 }
 
 async function listArtistDirs() {
@@ -73,7 +84,7 @@ function titleFromSlug(slug) {
 }
 
 async function main() {
-  const index = await catalogueIndex();
+  const { index, familiarityByArtist } = await catalogueIndex();
   const artistDirs = await listArtistDirs();
 
   if (artistDirs.length === 0) {
@@ -88,6 +99,8 @@ async function main() {
   const songs = [];
   const rejected = [];
   const seen = new Set();
+  /** Word stream -> the title that claimed it first. */
+  const seenWords = new Map();
 
   for (const artistSlug of artistDirs) {
     const dir = join(RAW_DIR, artistSlug);
@@ -99,12 +112,16 @@ async function main() {
 
       let meta = index.get(key);
       if (!meta) {
-        // Not in a catalogue — read the sidecar, else infer from the filename.
+        // Not in a catalogue release — read the sidecar, else infer from the
+        // filename. It may still have a hidden familiarity score waiting for
+        // it, keyed by title, if the catalogue scored it ahead of adding it
+        // to a release.
         try {
           meta = JSON.parse(await readFile(join(dir, `${slug}.json`), "utf8"));
         } catch {
           meta = { title: titleFromSlug(slug), artist: titleFromSlug(artistSlug) };
         }
+        meta.familiarity ??= familiarityByArtist.get(artistSlug)?.[meta.title];
       }
 
       const raw = await readFile(join(dir, file), "utf8");
@@ -121,15 +138,27 @@ async function main() {
       }
       seen.add(dedupeKey);
 
+      // Two titles, one text: a search that landed on the same recording twice
+      // (a reprise, a retitled cut, a medley). Playing both would let one
+      // snippet have two right answers.
+      const stream = words.join(" ");
+      const claimedBy = seenWords.get(stream);
+      if (claimedBy) {
+        rejected.push(`${meta.title} — same words as "${claimedBy}"`);
+        continue;
+      }
+      seenWords.set(stream, meta.title);
+
       songs.push({
         id: key,
         t: meta.title,
         a: meta.artist,
         al: meta.album ?? null,
         y: meta.year ?? null,
+        f: Math.max(0, Math.min(100, Math.round(meta.familiarity ?? 50))),
         // One space-joined string: markedly smaller over the wire than a JSON
         // array, and the client splits it once at load.
-        w: words.join(" "),
+        w: stream,
         n: words.length,
       });
 

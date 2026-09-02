@@ -10,6 +10,8 @@ interface RawSong {
   /** the whole song, space-joined */
   w: string;
   n: number;
+  /** familiarity, 0-100 */
+  f: number;
 }
 
 interface RawPayload {
@@ -41,12 +43,17 @@ export interface Library {
   sets: Map<string, SongSet>;
 }
 
-/** Strip accents/punctuation so "Ob-La-Di" is findable by typing "obladi". */
+/**
+ * Strip accents/punctuation so "Ob-La-Di" is findable by typing "obladi".
+ * Apostrophes and hyphens are dropped rather than turned into a space, so a
+ * quickly-typed "Ive" still finds "I've" and "obladi" still finds "Ob-La-Di".
+ */
 export function searchKey(s: string): string {
   return s
     .toLowerCase()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
+    .replace(/['-]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 }
@@ -90,6 +97,7 @@ export function loadLibrary(): Promise<Library> {
         artist: s.a,
         album: s.al,
         year: s.y,
+        familiarity: s.f,
         words: s.w.split(" "),
       }));
 

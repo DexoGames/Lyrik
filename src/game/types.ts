@@ -8,6 +8,12 @@ export interface Song {
   artist: string;
   album: string | null;
   year: number | null;
+  /**
+   * Hidden 0-100 score for how widely recognised this song is. Drives the
+   * daily's hits-to-rarities curve and the endless mode's draw weighting —
+   * never shown to the player.
+   */
+  familiarity: number;
   /** The whole song as one punctuation-free, line-break-free stream. */
   words: string[];
 }

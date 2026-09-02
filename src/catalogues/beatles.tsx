@@ -2,16 +2,27 @@ import type { CatalogueDef } from "./types";
 import { DEFAULT_COPY } from "./types";
 
 /**
- * Four bars at a slant: the crossing, and — conveniently — one stripe a man.
+ * The apple — Granny Smith, stem and leaf, no bite taken out of it. The label
+ * they signed themselves to, and the one shape that reads as The Beatles at
+ * thumbnail size.
  */
 function Motif({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 120 72" aria-hidden focusable="false">
+    <svg
+      className={className}
+      viewBox="0 0 96 96"
+      width={96}
+      height={96}
+      aria-hidden
+      focusable="false"
+    >
       <g fill="currentColor">
-        <rect x="6" y="10" width="16" height="52" transform="skewX(-9)" />
-        <rect x="34" y="10" width="16" height="52" transform="skewX(-9)" opacity="0.82" />
-        <rect x="62" y="10" width="16" height="52" transform="skewX(-9)" opacity="0.64" />
-        <rect x="90" y="10" width="16" height="52" transform="skewX(-9)" opacity="0.46" />
+        {/* body: a round apple, not an elongated one, with a shallow dip under the stem */}
+        <path d="M48 30c-9-8-24-7-32 3-9 11-6 34 5 51 8 12 16 13 27 8 11 5 19 4 27-8 11-17 14-40 5-51-8-10-23-11-32-3z" />
+        {/* stem, leaning the way the leaf does not */}
+        <path d="M42 30c-2-6 2-12 10-15-2 6-4 9-5 14z" />
+        {/* leaf */}
+        <path d="M44 25c-6-10-17-12-24-8 4 8 14 11 24 8z" />
       </g>
     </svg>
   );

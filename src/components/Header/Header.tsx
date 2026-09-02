@@ -46,6 +46,20 @@ export function Header({ catalogue, onStats, onHelp }: Props) {
       </nav>
 
       <div className={styles.tools}>
+        {/* The rest of the family. Lyrik is its own site, so this is a link
+            out, not a route. */}
+        <a
+          className={styles.home}
+          href="https://www.dexo.games"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          dexo<span className={styles.homeLong}>.games</span>
+          <span className={styles.homeArrow} aria-hidden>
+            ↗
+          </span>
+        </a>
+
         <button className={styles.icon} onClick={onHelp} aria-label="How to play">
           <IconHelp size={18} />
         </button>

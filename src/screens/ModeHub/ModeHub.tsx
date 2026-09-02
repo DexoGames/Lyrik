@@ -15,10 +15,22 @@ interface Props {
   set: SongSet;
 }
 
-const MODES: Array<{ mode: Mode; path: string; icon: typeof IconCalendar; name: string }> = [
-  { mode: "daily", path: "daily", icon: IconCalendar, name: "Daily" },
-  { mode: "run", path: "run", icon: IconInfinity, name: "Endless" },
-  { mode: "practice", path: "practice", icon: IconNote, name: "Practice" },
+/**
+ * Daily keeps the catalogue's own colour — it is the headline mode and the one
+ * worth branding. Endless and Practice take fixed hues instead, so the row is
+ * never three shades of one thing and so a mode looks the same whichever
+ * artist you are inside.
+ */
+const MODES: Array<{
+  mode: Mode;
+  path: string;
+  icon: typeof IconCalendar;
+  name: string;
+  tone: "accent" | "violet" | "sky";
+}> = [
+  { mode: "daily", path: "daily", icon: IconCalendar, name: "Daily", tone: "accent" },
+  { mode: "run", path: "run", icon: IconInfinity, name: "Endless", tone: "violet" },
+  { mode: "practice", path: "practice", icon: IconNote, name: "Practice", tone: "sky" },
 ];
 
 /** Inside a catalogue: its own wording, its own colour, then the three modes. */
@@ -61,7 +73,11 @@ export function ModeHub({ catalogue, set }: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + i * 0.07, type: "spring", stiffness: 300, damping: 28 }}
             >
-              <Link to={`/${catalogue.id}/${m.path}`} className={styles.card}>
+              <Link
+                to={`/${catalogue.id}/${m.path}`}
+                className={styles.card}
+                data-tone={m.tone}
+              >
                 <span className={styles.cardIcon}>
                   <m.icon size={22} />
                 </span>
@@ -88,18 +104,28 @@ export function ModeHub({ catalogue, set }: Props) {
 
       <section className={styles.strip}>
         <Fact n={daily.played} label="Dailies" />
-        <Fact n={streak} label="Streak" />
-        <Fact n={daily.maxStreak} label="Best streak" />
+        <Fact n={streak} label="Streak" tone="gold" />
+        <Fact n={daily.maxStreak} label="Best streak" tone="gold" />
         <Fact n={`${daily.bestScore}/${DAILY_MAX}`} label="Best daily" />
-        <Fact n={run.bestScore} label="Best run" />
+        <Fact n={run.bestScore} label="Best run" tone="violet" />
       </section>
     </main>
   );
 }
 
-function Fact({ n, label }: { n: number | string; label: string }) {
+/** A record. `tone` ties the number to whatever it counts — streaks are gold,
+    the endless best matches the Endless card. */
+function Fact({
+  n,
+  label,
+  tone,
+}: {
+  n: number | string;
+  label: string;
+  tone?: "gold" | "violet";
+}) {
   return (
-    <div className={styles.fact}>
+    <div className={styles.fact} data-tone={tone}>
       <b>{n}</b>
       <span>{label}</span>
     </div>

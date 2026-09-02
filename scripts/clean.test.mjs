@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cleanLyrics, normalizeTitle, slugify } from "./lib/clean.mjs";
+import { cleanLyrics, latinShare, normalizeTitle, slugify } from "./lib/clean.mjs";
 
 /** Invented filler — the cleaner is generic, so no real lyric is needed. */
 const SAMPLE = `[Verse 1]
@@ -21,8 +21,8 @@ So long, farewell, auf Wiedersehen
 describe("cleanLyrics", () => {
   const { words } = cleanLyrics(SAMPLE, { minWords: 1 });
 
-  it("drops every punctuation mark", () => {
-    expect(words.join(" ")).not.toMatch(/[^a-z0-9 ]/);
+  it("drops sentence punctuation but keeps apostrophes and hyphens", () => {
+    expect(words.join(" ")).not.toMatch(/[^a-z0-9 '-]/);
   });
 
   it("erases line structure into one stream", () => {
@@ -36,10 +36,9 @@ describe("cleanLyrics", () => {
     }
   });
 
-  it("folds apostrophes into the word", () => {
-    expect(words).toContain("its");
-    expect(words).toContain("wont");
-    expect(words.join(" ")).not.toContain("'");
+  it("keeps apostrophes as part of the word", () => {
+    expect(words).toContain("it's");
+    expect(words).toContain("won't");
   });
 
   it("keeps sung words that happened to sit in brackets", () => {
@@ -49,12 +48,17 @@ describe("cleanLyrics", () => {
 
   it("strips accents so a plain keyboard can match", () => {
     const { words: w } = cleanLyrics("Où es-tu, chérie", { minWords: 1 });
-    expect(w).toEqual(["ou", "es", "tu", "cherie"]);
+    expect(w).toEqual(["ou", "es-tu", "cherie"]);
   });
 
-  it("splits hyphenated words in two", () => {
+  it("keeps hyphenated words joined", () => {
     const { words: w } = cleanLyrics("well-known do-si-do", { minWords: 1 });
-    expect(w).toEqual(["well", "known", "do", "si", "do"]);
+    expect(w).toEqual(["well-known", "do-si-do"]);
+  });
+
+  it("drops a dash used as standalone punctuation", () => {
+    const { words: w } = cleanLyrics("hello - there -- friend", { minWords: 1 });
+    expect(w).toEqual(["hello", "there", "friend"]);
   });
 
   it("strips .lrc timestamps", () => {
@@ -72,6 +76,27 @@ describe("cleanLyrics", () => {
     const res = cleanLyrics(Array.from({ length: 60 }, (_, i) => `w${i}`).join(" "));
     expect(res.ok).toBe(true);
     expect(res.words).toHaveLength(60);
+  });
+
+  it("rejects a translated take, and keeps Latin-script languages", () => {
+    // A lyric database files translations under the original title; you cannot
+    // play a song whose words are not on the keyboard you type guesses with.
+    const japanese = cleanLyrics("しっかり ".repeat(40), { minWords: 1 });
+    expect(japanese.ok).toBe(false);
+    expect(japanese.reason).toMatch(/not Latin script/);
+
+    // Spanish, French and German are Latin script and stay playable.
+    const spanish = cleanLyrics("dós oruguítas enamoradas ".repeat(20), { minWords: 1 });
+    expect(spanish.ok).toBe(true);
+    expect(spanish.words).toContain("dos");
+  });
+
+  it("measures how much of a text is plain a-z", () => {
+    expect(latinShare("hello there")).toBe(1);
+    expect(latinShare("Michèle, ma belle")).toBe(1);
+    expect(latinShare("しっかり")).toBe(0);
+    expect(latinShare("")).toBe(0);
+    expect(latinShare("123 !!!")).toBe(0);
   });
 
   it("survives empty and junk input", () => {

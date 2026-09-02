@@ -13,7 +13,7 @@ import {
 import { pickWindow, canRevealAfter, canRevealBefore } from "./snippet";
 
 /** Synthetic songs: word_0 … word_n, so no real lyric is needed to test. */
-function makeSong(i: number, length = 120): Song {
+function makeSong(i: number, length = 120, familiarity = 50): Song {
   return {
     id: `test/song-${i}`,
     catalogueId: "test",
@@ -21,12 +21,16 @@ function makeSong(i: number, length = 120): Song {
     artist: "Test",
     album: "Album",
     year: 1970,
+    familiarity,
     words: Array.from({ length }, (_, w) => `s${i}w${w}`),
   };
 }
 
+/** Familiarity spread evenly 0..100 across the set, by index. */
 function makeSet(count = 12): SongSet {
-  const songs = Array.from({ length: count }, (_, i) => makeSong(i));
+  const songs = Array.from({ length: count }, (_, i) =>
+    makeSong(i, 120, Math.round((i / (count - 1)) * 100)),
+  );
   return {
     id: "test",
     songs,
@@ -154,6 +158,15 @@ describe("daily", () => {
     expect(state.results).toHaveLength(DAILY_ROUNDS);
     expect(state.score).toBe(100 * DAILY_ROUNDS);
   });
+
+  it("moves from the most familiar songs to the least across its five rounds", () => {
+    // lib's 12 songs have familiarity spread evenly 0..100 by index.
+    const state = startGame("daily", lib, new Date("2026-09-02T10:00:00Z"));
+    const familiarities = state.queue.map((id) => lib.byId.get(id)!.familiarity);
+    const [r0, r1, r2, r3, r4] = familiarities;
+    expect(Math.min(r0, r1)).toBeGreaterThan(Math.max(r2, r3));
+    expect(Math.max(r2, r3)).toBeGreaterThan(r4);
+  });
 });
 
 describe("endless run", () => {
@@ -208,5 +221,17 @@ describe("endless run", () => {
     expect(state.phase).toBe("playing");
     expect(state.streak).toBe(5);
     expect(new Set(state.queue).size).toBe(state.queue.length);
+  });
+
+  it("draws the most familiar song more often than the least familiar one", () => {
+    const counts = new Map<string, number>();
+    for (let i = 0; i < 3000; i++) {
+      const state = startGame("run", lib);
+      const id = state.round!.songId;
+      counts.set(id, (counts.get(id) ?? 0) + 1);
+    }
+    const mostFamiliar = lib.songs.reduce((a, b) => (b.familiarity > a.familiarity ? b : a));
+    const leastFamiliar = lib.songs.reduce((a, b) => (b.familiarity < a.familiarity ? b : a));
+    expect(counts.get(mostFamiliar.id) ?? 0).toBeGreaterThan(counts.get(leastFamiliar.id) ?? 0);
   });
 });

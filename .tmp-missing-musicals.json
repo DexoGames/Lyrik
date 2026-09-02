@@ -1,0 +1,850 @@
+[
+ {
+  "title": "One Jump Ahead",
+  "artist": "Aladdin",
+  "album": "Aladdin",
+  "year": 1992,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:13.734Z"
+ },
+ {
+  "title": "I Think I'm Gonna Like It Here",
+  "artist": "Annie",
+  "album": "Annie",
+  "year": 1977,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:42.148Z"
+ },
+ {
+  "title": "Little Girls",
+  "artist": "Annie",
+  "album": "Annie",
+  "year": 1977,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:42.494Z"
+ },
+ {
+  "title": "The Mob Song",
+  "artist": "Beauty and the Beast",
+  "album": "Beauty and the Beast",
+  "year": 1991,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:12.619Z"
+ },
+ {
+  "title": "Skimbleshanks: The Railway Cat",
+  "artist": "Cats",
+  "album": "Cats",
+  "year": 1981,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:56.190Z"
+ },
+ {
+  "title": "The Old Gumbie Cat",
+  "artist": "Cats",
+  "album": "Cats",
+  "year": 1981,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:56.698Z"
+ },
+ {
+  "title": "Funny Honey",
+  "artist": "Chicago the Musical",
+  "album": "Chicago",
+  "year": 1975,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:28:38.852Z"
+ },
+ {
+  "title": "We Both Reached for the Gun",
+  "artist": "Chicago the Musical",
+  "album": "Chicago",
+  "year": 1975,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:36.750Z"
+ },
+ {
+  "title": "When You're Good to Mama",
+  "artist": "Chicago the Musical",
+  "album": "Chicago",
+  "year": 1975,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:11.242Z"
+ },
+ {
+  "title": "Only Us",
+  "artist": "Dear Evan Hansen",
+  "album": "Dear Evan Hansen",
+  "year": 2015,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:31:14.828Z"
+ },
+ {
+  "title": "Requiem",
+  "artist": "Dear Evan Hansen",
+  "album": "Dear Evan Hansen",
+  "year": 2015,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:31:10.777Z"
+ },
+ {
+  "title": "So Big / So Small",
+  "artist": "Dear Evan Hansen",
+  "album": "Dear Evan Hansen",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:34.131Z"
+ },
+ {
+  "title": "Words Fail",
+  "artist": "Dear Evan Hansen",
+  "album": "Dear Evan Hansen",
+  "year": 2015,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:31:13.424Z"
+ },
+ {
+  "title": "All of You",
+  "artist": "Encanto",
+  "album": "Encanto",
+  "year": 2021,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:44.520Z"
+ },
+ {
+  "title": "What Else Can I Do?",
+  "artist": "Encanto",
+  "album": "Encanto",
+  "year": 2021,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:43.255Z"
+ },
+ {
+  "title": "Fixer Upper",
+  "artist": "Frozen",
+  "album": "Frozen",
+  "year": 2013,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:50.183Z"
+ },
+ {
+  "title": "Frozen Heart",
+  "artist": "Frozen",
+  "album": "Frozen",
+  "year": 2013,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:50.970Z"
+ },
+ {
+  "title": "Some Things Never Change",
+  "artist": "Frozen 2",
+  "album": "Frozen II",
+  "year": 2019,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:37.823Z"
+ },
+ {
+  "title": "When I Am Older",
+  "artist": "Frozen 2",
+  "album": "Frozen II",
+  "year": 2019,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:39.857Z"
+ },
+ {
+  "title": "Beauty School Dropout",
+  "artist": "Grease",
+  "album": "Grease",
+  "year": 1971,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:30.023Z"
+ },
+ {
+  "title": "Look at Me, I'm Sandra Dee",
+  "artist": "Grease",
+  "album": "Grease",
+  "year": 1971,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:31.722Z"
+ },
+ {
+  "title": "Sandy",
+  "artist": "Grease",
+  "album": "Grease",
+  "year": 1971,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:31.049Z"
+ },
+ {
+  "title": "There Are Worse Things I Could Do",
+  "artist": "Grease",
+  "album": "Grease",
+  "year": 1971,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:32.317Z"
+ },
+ {
+  "title": "Ladies' Choice",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:47.576Z"
+ },
+ {
+  "title": "Mama, I'm a Big Girl Now",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:45.448Z"
+ },
+ {
+  "title": "Run and Tell That",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:48.756Z"
+ },
+ {
+  "title": "(The Legend of) Miss Baltimore Crabs",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:46.463Z"
+ },
+ {
+  "title": "The Nicest Kids in Town",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:44.918Z"
+ },
+ {
+  "title": "Timeless to Me",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:50.039Z"
+ },
+ {
+  "title": "Without Love",
+  "artist": "Hairspray",
+  "album": "Hairspray",
+  "year": 2002,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:50.394Z"
+ },
+ {
+  "title": "Aaron Burr, Sir",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:52.537Z"
+ },
+ {
+  "title": "Cabinet Battle #1",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:03.093Z"
+ },
+ {
+  "title": "Dear Theodosia",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:00.824Z"
+ },
+ {
+  "title": "Farmer Refuted",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:54.784Z"
+ },
+ {
+  "title": "Guns and Ships",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:58.427Z"
+ },
+ {
+  "title": "History Has Its Eyes on You",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:58.942Z"
+ },
+ {
+  "title": "The Election of 1800",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:06.642Z"
+ },
+ {
+  "title": "Washington on Your Side",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:03.679Z"
+ },
+ {
+  "title": "What'd I Miss",
+  "artist": "Hamilton",
+  "album": "Hamilton",
+  "year": 2015,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:02.533Z"
+ },
+ {
+  "title": "The Gospel Truth",
+  "artist": "Hercules",
+  "album": "Hercules",
+  "year": 1997,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:34.217Z"
+ },
+ {
+  "title": "Bop to the Top",
+  "artist": "High School Musical Cast",
+  "album": "High School Musical",
+  "year": 2006,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:02.648Z"
+ },
+ {
+  "title": "What I've Been Looking For",
+  "artist": "High School Musical Cast",
+  "album": "High School Musical",
+  "year": 2006,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:00.615Z"
+ },
+ {
+  "title": "When There Was Me and You",
+  "artist": "High School Musical Cast",
+  "album": "High School Musical",
+  "year": 2006,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:02.087Z"
+ },
+ {
+  "title": "All for One",
+  "artist": "High School Musical 2 Cast",
+  "album": "High School Musical 2",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:08.291Z"
+ },
+ {
+  "title": "Everyday",
+  "artist": "High School Musical 2 Cast",
+  "album": "High School Musical 2",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:07.837Z"
+ },
+ {
+  "title": "Fabulous",
+  "artist": "High School Musical 2 Cast",
+  "album": "High School Musical 2",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:05.152Z"
+ },
+ {
+  "title": "Work This Out",
+  "artist": "High School Musical 2 Cast",
+  "album": "High School Musical 2",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:05.721Z"
+ },
+ {
+  "title": "A Night to Remember",
+  "artist": "High School Musical 3 Cast",
+  "album": "High School Musical 3: Senior Year",
+  "year": 2008,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:25.115Z"
+ },
+ {
+  "title": "Just Wanna Be With You",
+  "artist": "High School Musical 3 Cast",
+  "album": "High School Musical 3: Senior Year",
+  "year": 2008,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:22.631Z"
+ },
+ {
+  "title": "The Boys Are Back",
+  "artist": "High School Musical 3 Cast",
+  "album": "High School Musical 3: Senior Year",
+  "year": 2008,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:26.972Z"
+ },
+ {
+  "title": "Jacob and Sons",
+  "artist": "Joseph and the Amazing Technicolor Dreamcoat",
+  "album": "Joseph and the Amazing Technicolor Dreamcoat",
+  "year": 1968,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:26.355Z"
+ },
+ {
+  "title": "One More Angel in Heaven",
+  "artist": "Joseph and the Amazing Technicolor Dreamcoat",
+  "album": "Joseph and the Amazing Technicolor Dreamcoat",
+  "year": 1968,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:27.482Z"
+ },
+ {
+  "title": "Blood in the Water",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:11.345Z"
+ },
+ {
+  "title": "Take It Like a Man",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:15.077Z"
+ },
+ {
+  "title": "The Harvard Variations",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:17.002Z"
+ },
+ {
+  "title": "There! Right There!",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:15.980Z"
+ },
+ {
+  "title": "What You Want",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:09.960Z"
+ },
+ {
+  "title": "Whipped Into Shape",
+  "artist": "Legally Blonde the Musical",
+  "album": "Legally Blonde the Musical",
+  "year": 2007,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:14.222Z"
+ },
+ {
+  "title": "A Heart Full of Love",
+  "artist": "Les Misérables",
+  "album": "Les Misérables",
+  "year": 1980,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:49.849Z"
+ },
+ {
+  "title": "At the End of the Day",
+  "artist": "Les Misérables",
+  "album": "Les Misérables",
+  "year": 1980,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:43.588Z"
+ },
+ {
+  "title": "In My Life",
+  "artist": "Les Misérables",
+  "album": "Les Misérables",
+  "year": 1980,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:48.911Z"
+ },
+ {
+  "title": "Who Am I?",
+  "artist": "Les Misérables",
+  "album": "Les Misérables",
+  "year": 1980,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:45.561Z"
+ },
+ {
+  "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+  "artist": "Mamma Mia!",
+  "album": "Mamma Mia!",
+  "year": 1999,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:43.144Z"
+ },
+ {
+  "title": "Honey, Honey",
+  "artist": "Mamma Mia!",
+  "album": "Mamma Mia!",
+  "year": 1999,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:41.584Z"
+ },
+ {
+  "title": "Lay All Your Love on Me",
+  "artist": "Mamma Mia!",
+  "album": "Mamma Mia!",
+  "year": 1999,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:42.113Z"
+ },
+ {
+  "title": "Slipping Through My Fingers",
+  "artist": "Mamma Mia!",
+  "album": "Mamma Mia!",
+  "year": 1999,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:43.694Z"
+ },
+ {
+  "title": "Voulez-Vous",
+  "artist": "Mamma Mia!",
+  "album": "Mamma Mia!",
+  "year": 1999,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:41.192Z"
+ },
+ {
+  "title": "Jolly Holiday",
+  "artist": "Mary Poppins",
+  "album": "Mary Poppins",
+  "year": 1964,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:22.652Z"
+ },
+ {
+  "title": "Sister Suffragette",
+  "artist": "Mary Poppins",
+  "album": "Mary Poppins",
+  "year": 1964,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:24.847Z"
+ },
+ {
+  "title": "Step in Time",
+  "artist": "Mary Poppins",
+  "album": "Mary Poppins",
+  "year": 1964,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:24.350Z"
+ },
+ {
+  "title": "Bruce",
+  "artist": "Matilda the Musical",
+  "album": "Matilda the Musical",
+  "year": 2010,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:32.935Z"
+ },
+ {
+  "title": "My House",
+  "artist": "Matilda the Musical",
+  "album": "Matilda the Musical",
+  "year": 2010,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:33.796Z"
+ },
+ {
+  "title": "Quiet",
+  "artist": "Matilda the Musical",
+  "album": "Matilda the Musical",
+  "year": 2010,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:33.340Z"
+ },
+ {
+  "title": "Shiny",
+  "artist": "Moana",
+  "album": "Moana",
+  "year": 2016,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:18.235Z"
+ },
+ {
+  "title": "A Girl Worth Fighting For",
+  "artist": "Mulan",
+  "album": "Mulan",
+  "year": 1998,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:37.351Z"
+ },
+ {
+  "title": "I'd Do Anything",
+  "artist": "Oliver!",
+  "album": "Oliver!",
+  "year": 1960,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:17.172Z"
+ },
+ {
+  "title": "Oom-Pah-Pah",
+  "artist": "Oliver!",
+  "album": "Oliver!",
+  "year": 1960,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:20.029Z"
+ },
+ {
+  "title": "Reviewing the Situation",
+  "artist": "Oliver!",
+  "album": "Oliver!",
+  "year": 1960,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:20.390Z"
+ },
+ {
+  "title": "Savages",
+  "artist": "Pocahontas",
+  "album": "Pocahontas",
+  "year": 1995,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:21.572Z"
+ },
+ {
+  "title": "I'll Cover You",
+  "artist": "Rent",
+  "album": "Rent",
+  "year": 1996,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:29.880Z"
+ },
+ {
+  "title": "Light My Candle",
+  "artist": "Rent",
+  "album": "Rent",
+  "year": 1996,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:27.303Z"
+ },
+ {
+  "title": "Rent",
+  "artist": "Rent",
+  "album": "Rent",
+  "year": 1996,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:26.693Z"
+ },
+ {
+  "title": "All You Wanna Do",
+  "artist": "Six the Musical",
+  "album": "Six",
+  "year": 2017,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:31:26.262Z"
+ },
+ {
+  "title": "Get Down",
+  "artist": "Six the Musical",
+  "album": "Six",
+  "year": 2017,
+  "source": "lyrics.ovh",
+  "fetchedAt": "2026-09-02T11:31:25.473Z"
+ },
+ {
+  "title": "Haus of Holbein",
+  "artist": "Six the Musical",
+  "album": "Six",
+  "year": 2017,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:24.047Z"
+ },
+ {
+  "title": "I Don't Need Your Love",
+  "artist": "Six the Musical",
+  "album": "Six",
+  "year": 2017,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:35.888Z"
+ },
+ {
+  "title": "Man Up",
+  "artist": "The Book of Mormon",
+  "album": "The Book of Mormon",
+  "year": 2011,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:30:41.511Z"
+ },
+ {
+  "title": "Two by Two",
+  "artist": "The Book of Mormon",
+  "album": "The Book of Mormon",
+  "year": 2011,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:29.373Z"
+ },
+ {
+  "title": "You and Me (But Mostly Me)",
+  "artist": "The Book of Mormon",
+  "album": "The Book of Mormon",
+  "year": 2011,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:36:30.957Z"
+ },
+ {
+  "title": "From Now On",
+  "artist": "The Greatest Showman",
+  "album": "The Greatest Showman",
+  "year": 2017,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:34.695Z"
+ },
+ {
+  "title": "The Other Side",
+  "artist": "The Greatest Showman",
+  "album": "The Greatest Showman",
+  "year": 2017,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:31.016Z"
+ },
+ {
+  "title": "Tightrope",
+  "artist": "The Greatest Showman",
+  "album": "The Greatest Showman",
+  "year": 2017,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:31:33.629Z"
+ },
+ {
+  "title": "Topsy Turvy",
+  "artist": "The Hunchback of Notre Dame",
+  "album": "The Hunchback of Notre Dame",
+  "year": 1996,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:24.151Z"
+ },
+ {
+  "title": "Fathoms Below",
+  "artist": "The Little Mermaid",
+  "album": "The Little Mermaid",
+  "year": 1989,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:08.593Z"
+ },
+ {
+  "title": "Prima Donna",
+  "artist": "The Phantom of the Opera",
+  "album": "The Phantom of the Opera",
+  "year": 1986,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:03.552Z"
+ },
+ {
+  "title": "The Point of No Return",
+  "artist": "The Phantom of the Opera",
+  "album": "The Phantom of the Opera",
+  "year": 1986,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:02.402Z"
+ },
+ {
+  "title": "Wishing You Were Somehow Here Again",
+  "artist": "The Phantom of the Opera",
+  "album": "The Phantom of the Opera",
+  "year": 1986,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:01.378Z"
+ },
+ {
+  "title": "So Long, Farewell",
+  "artist": "The Sound of Music",
+  "album": "The Sound of Music",
+  "year": 1959,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:14.195Z"
+ },
+ {
+  "title": "The Lonely Goatherd",
+  "artist": "The Sound of Music",
+  "album": "The Sound of Music",
+  "year": 1959,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:12.457Z"
+ },
+ {
+  "title": "Gee, Officer Krupke",
+  "artist": "West Side Story",
+  "album": "West Side Story",
+  "year": 1957,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:09.871Z"
+ },
+ {
+  "title": "I Feel Pretty",
+  "artist": "West Side Story",
+  "album": "West Side Story",
+  "year": 1957,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:08.735Z"
+ },
+ {
+  "title": "Something's Coming",
+  "artist": "West Side Story",
+  "album": "West Side Story",
+  "year": 1957,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:28:05.828Z"
+ },
+ {
+  "title": "As Long as You're Mine",
+  "artist": "Wicked",
+  "album": "Wicked",
+  "year": 2003,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:57.691Z"
+ },
+ {
+  "title": "I'm Not That Girl",
+  "artist": "Wicked",
+  "album": "Wicked",
+  "year": 2003,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:55.031Z"
+ },
+ {
+  "title": "One Short Day",
+  "artist": "Wicked",
+  "album": "Wicked",
+  "year": 2003,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:56.490Z"
+ },
+ {
+  "title": "Thank Goodness",
+  "artist": "Wicked",
+  "album": "Wicked",
+  "year": 2003,
+  "source": "lrclib",
+  "fetchedAt": "2026-09-02T11:29:57.124Z"
+ }
+]

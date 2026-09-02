@@ -43,7 +43,24 @@
     --bad: #ff4d4d;
     --bad-ink: #2a0606;
     --gold: #e8b923;
+    --gold-deep: #c2960f;
     --gold-ink: #3a2a02;
+
+    /* --- fixed hues: three colours that deliberately do NOT follow the
+       catalogue skin. Shared actions and the mode cards borrow them so a
+       screen is never one colour top to bottom, and so "share", "endless" and
+       "practice" look the same whichever artist you are inside. --- */
+    --sky: #4aa8f0;
+    --sky-deep: #2b7fc4;
+    --sky-ink: #04182b;
+
+    --violet: #a683f5;
+    --violet-deep: #7d55d8;
+    --violet-ink: #150a2e;
+
+    --teal: #35c9b0;
+    --teal-deep: #1d9c88;
+    --teal-ink: #032620;
 
     /* --- word-count ladder: 3 words is gold, 6 is scraping by. Used by the
        score pips, the stats histogram and the share grid alike. --- */
@@ -77,6 +94,24 @@
     --accent-ink: #0f2a06;
     --accent-soft: rgba(141, 198, 63, 0.14);
     --glow: rgba(141, 198, 63, 0.12);
+}
+
+.theme-musicals {
+    /* House-tab red — theatre velvet under a warm follow spot. */
+    --accent: #e5484d;
+    --accent-deep: #b62a2f;
+    --accent-ink: #2e0406;
+    --accent-soft: rgba(229, 72, 77, 0.14);
+    --glow: rgba(229, 72, 77, 0.13);
+}
+
+.theme-abba {
+    /* Sweden blue, lit like a mirrorball. */
+    --accent: #2f80ed;
+    --accent-deep: #1e5bb8;
+    --accent-ink: #04122b;
+    --accent-soft: rgba(47, 128, 237, 0.14);
+    --glow: rgba(47, 128, 237, 0.13);
 }
 
 * {

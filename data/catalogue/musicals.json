@@ -1,0 +1,808 @@
+{
+  "artist": "Musicals",
+  "slug": "musicals",
+  "note": "The numbers everyone can already hum - stage and screen, Broadway and the West End, and Disney's whole songbook. Each show is credited to its own cast, so `artist` sits on the release rather than the catalogue.",
+  "skip": [
+    "Overture",
+    "Entr'acte",
+    "Finale",
+    "We're Off to See the Wizard"
+  ],
+  "releases": [
+    {
+      "album": "The Wizard of Oz",
+      "artist": "The Wizard of Oz",
+      "year": 1939,
+      "tracks": [
+        "Over the Rainbow",
+        "Ding-Dong! The Witch Is Dead",
+        "If I Only Had a Brain",
+        "We're Off to See the Wizard",
+        "Follow the Yellow Brick Road"
+      ]
+    },
+    {
+      "album": "West Side Story",
+      "artist": "West Side Story",
+      "year": 1957,
+      "tracks": [
+        "Maria",
+        "Tonight",
+        "America",
+        "Somewhere",
+        "Cool"
+      ]
+    },
+    {
+      "album": "The Sound of Music",
+      "artist": "The Sound of Music",
+      "year": 1959,
+      "tracks": [
+        "The Sound of Music",
+        "Do-Re-Mi",
+        "My Favorite Things",
+        "Sixteen Going on Seventeen",
+        "Edelweiss",
+        "Climb Ev'ry Mountain"
+      ]
+    },
+    {
+      "album": "Oliver!",
+      "artist": "Oliver!",
+      "year": 1960,
+      "tracks": [
+        "Food, Glorious Food",
+        "Consider Yourself",
+        "You've Got to Pick a Pocket or Two",
+        "Where Is Love?",
+        "As Long as He Needs Me"
+      ]
+    },
+    {
+      "album": "Mary Poppins",
+      "artist": "Mary Poppins",
+      "year": 1964,
+      "tracks": [
+        "A Spoonful of Sugar",
+        "Supercalifragilisticexpialidocious",
+        "Chim Chim Cher-ee",
+        "Feed the Birds",
+        "Let's Go Fly a Kite"
+      ]
+    },
+    {
+      "album": "Joseph and the Amazing Technicolor Dreamcoat",
+      "artist": "Joseph and the Amazing Technicolor Dreamcoat",
+      "year": 1968,
+      "tracks": [
+        "Any Dream Will Do",
+        "Close Every Door",
+        "Go, Go, Go Joseph",
+        "Those Canaan Days"
+      ]
+    },
+    {
+      "album": "Grease",
+      "artist": "Grease",
+      "year": 1971,
+      "tracks": [
+        "Summer Nights",
+        "Greased Lightnin'",
+        "Hopelessly Devoted to You",
+        "You're the One That I Want",
+        "We Go Together"
+      ]
+    },
+    {
+      "album": "Chicago",
+      "artist": "Chicago the Musical",
+      "year": 1975,
+      "tracks": [
+        "All That Jazz",
+        "Cell Block Tango",
+        "Roxie",
+        "Mister Cellophane",
+        "Razzle Dazzle",
+        "Nowadays"
+      ]
+    },
+    {
+      "album": "Annie",
+      "artist": "Annie",
+      "year": 1977,
+      "tracks": [
+        "Tomorrow",
+        "It's the Hard Knock Life",
+        "Maybe",
+        "Easy Street",
+        "NYC"
+      ]
+    },
+    {
+      "album": "Les Misérables",
+      "artist": "Les Misérables",
+      "year": 1980,
+      "tracks": [
+        "I Dreamed a Dream",
+        "Castle on a Cloud",
+        "Master of the House",
+        "Stars",
+        "Do You Hear the People Sing?",
+        "On My Own",
+        "One Day More",
+        "Bring Him Home",
+        "Empty Chairs at Empty Tables"
+      ]
+    },
+    {
+      "album": "Cats",
+      "artist": "Cats",
+      "year": 1981,
+      "tracks": [
+        "Memory",
+        "Mr. Mistoffelees",
+        "Macavity",
+        "Jellicle Songs for Jellicle Cats"
+      ]
+    },
+    {
+      "album": "The Phantom of the Opera",
+      "artist": "The Phantom of the Opera",
+      "year": 1986,
+      "tracks": [
+        "The Phantom of the Opera",
+        "Think of Me",
+        "Angel of Music",
+        "The Music of the Night",
+        "All I Ask of You",
+        "Masquerade"
+      ]
+    },
+    {
+      "album": "The Little Mermaid",
+      "artist": "The Little Mermaid",
+      "year": 1989,
+      "tracks": [
+        "Part of Your World",
+        "Under the Sea",
+        "Poor Unfortunate Souls",
+        "Kiss the Girl"
+      ]
+    },
+    {
+      "album": "Beauty and the Beast",
+      "artist": "Beauty and the Beast",
+      "year": 1991,
+      "tracks": [
+        "Belle",
+        "Gaston",
+        "Be Our Guest",
+        "Something There",
+        "Beauty and the Beast"
+      ]
+    },
+    {
+      "album": "Aladdin",
+      "artist": "Aladdin",
+      "year": 1992,
+      "tracks": [
+        "Arabian Nights",
+        "Friend Like Me",
+        "Prince Ali",
+        "A Whole New World"
+      ]
+    },
+    {
+      "album": "The Lion King",
+      "artist": "The Lion King",
+      "year": 1994,
+      "tracks": [
+        "Circle of Life",
+        "I Just Can't Wait to Be King",
+        "Be Prepared",
+        "Hakuna Matata",
+        "Can You Feel the Love Tonight"
+      ]
+    },
+    {
+      "album": "Pocahontas",
+      "artist": "Pocahontas",
+      "year": 1995,
+      "tracks": [
+        "Colors of the Wind",
+        "Just Around the Riverbend",
+        "Mine, Mine, Mine"
+      ]
+    },
+    {
+      "album": "The Hunchback of Notre Dame",
+      "artist": "The Hunchback of Notre Dame",
+      "year": 1996,
+      "tracks": [
+        "Out There",
+        "God Help the Outcasts",
+        "Hellfire"
+      ]
+    },
+    {
+      "album": "Rent",
+      "artist": "Rent",
+      "year": 1996,
+      "tracks": [
+        "Seasons of Love",
+        "La Vie Bohème",
+        "Take Me or Leave Me",
+        "Out Tonight",
+        "One Song Glory",
+        "Another Day"
+      ]
+    },
+    {
+      "album": "Hercules",
+      "artist": "Hercules",
+      "year": 1997,
+      "tracks": [
+        "Go the Distance",
+        "Zero to Hero",
+        "I Won't Say (I'm in Love)"
+      ]
+    },
+    {
+      "album": "Mulan",
+      "artist": "Mulan",
+      "year": 1998,
+      "tracks": [
+        "Reflection",
+        "I'll Make a Man Out of You",
+        "Honor to Us All"
+      ]
+    },
+    {
+      "album": "Mamma Mia!",
+      "artist": "Mamma Mia!",
+      "year": 1999,
+      "tracks": [
+        "Dancing Queen",
+        "Mamma Mia",
+        "Money, Money, Money",
+        "The Winner Takes It All",
+        "Super Trouper",
+        "Take a Chance on Me"
+      ]
+    },
+    {
+      "album": "Hairspray",
+      "artist": "Hairspray",
+      "year": 2002,
+      "tracks": [
+        "Good Morning Baltimore",
+        "I Can Hear the Bells",
+        "Welcome to the 60's",
+        "It Takes Two",
+        "Big, Blonde and Beautiful",
+        "I Know Where I've Been",
+        "You Can't Stop the Beat"
+      ]
+    },
+    {
+      "album": "Wicked",
+      "artist": "Wicked",
+      "year": 2003,
+      "tracks": [
+        "No One Mourns the Wicked",
+        "The Wizard and I",
+        "What Is This Feeling?",
+        "Dancing Through Life",
+        "Popular",
+        "Defying Gravity",
+        "No Good Deed",
+        "For Good"
+      ]
+    },
+    {
+      "album": "High School Musical",
+      "artist": "High School Musical Cast",
+      "year": 2006,
+      "tracks": [
+        "Start of Something New",
+        "Get'cha Head in the Game",
+        "Stick to the Status Quo",
+        "Breaking Free",
+        "We're All in This Together"
+      ]
+    },
+    {
+      "album": "High School Musical 2",
+      "artist": "High School Musical 2 Cast",
+      "year": 2007,
+      "tracks": [
+        "What Time Is It",
+        "You Are the Music in Me",
+        "I Don't Dance",
+        "Gotta Go My Own Way",
+        "Bet On It"
+      ]
+    },
+    {
+      "album": "Legally Blonde the Musical",
+      "artist": "Legally Blonde the Musical",
+      "year": 2007,
+      "tracks": [
+        "Omigod You Guys",
+        "Positive",
+        "Chip on My Shoulder",
+        "So Much Better",
+        "Bend and Snap",
+        "Legally Blonde"
+      ]
+    },
+    {
+      "album": "High School Musical 3: Senior Year",
+      "artist": "High School Musical 3 Cast",
+      "year": 2008,
+      "tracks": [
+        "Now or Never",
+        "Right Here, Right Now",
+        "I Want It All",
+        "Can I Have This Dance",
+        "Scream",
+        "High School Musical"
+      ]
+    },
+    {
+      "album": "Matilda the Musical",
+      "artist": "Matilda the Musical",
+      "year": 2010,
+      "tracks": [
+        "Naughty",
+        "When I Grow Up",
+        "Revolting Children",
+        "Miracle",
+        "School Song"
+      ]
+    },
+    {
+      "album": "Tangled",
+      "artist": "Tangled",
+      "year": 2010,
+      "tracks": [
+        "When Will My Life Begin?",
+        "Mother Knows Best",
+        "I've Got a Dream",
+        "I See the Light"
+      ]
+    },
+    {
+      "album": "The Book of Mormon",
+      "artist": "The Book of Mormon",
+      "year": 2011,
+      "tracks": [
+        "Hello!",
+        "Turn It Off",
+        "Spooky Mormon Hell Dream",
+        "I Believe"
+      ]
+    },
+    {
+      "album": "Frozen",
+      "artist": "Frozen",
+      "year": 2013,
+      "tracks": [
+        "Let It Go",
+        "Do You Want to Build a Snowman?",
+        "For the First Time in Forever",
+        "Love Is an Open Door",
+        "In Summer"
+      ]
+    },
+    {
+      "album": "Hamilton",
+      "artist": "Hamilton",
+      "year": 2015,
+      "tracks": [
+        "Alexander Hamilton",
+        "My Shot",
+        "The Schuyler Sisters",
+        "You'll Be Back",
+        "Right Hand Man",
+        "Helpless",
+        "Satisfied",
+        "Wait for It",
+        "Yorktown (The World Turned Upside Down)",
+        "Non-Stop",
+        "The Room Where It Happens",
+        "The Reynolds Pamphlet",
+        "Burn",
+        "It's Quiet Uptown",
+        "Who Lives, Who Dies, Who Tells Your Story"
+      ]
+    },
+    {
+      "album": "Dear Evan Hansen",
+      "artist": "Dear Evan Hansen",
+      "year": 2015,
+      "tracks": [
+        "Waving Through a Window",
+        "For Forever",
+        "Sincerely, Me",
+        "If I Could Tell Her",
+        "You Will Be Found"
+      ]
+    },
+    {
+      "album": "Moana",
+      "artist": "Moana",
+      "year": 2016,
+      "tracks": [
+        "How Far I'll Go",
+        "You're Welcome",
+        "We Know the Way",
+        "Where You Are"
+      ]
+    },
+    {
+      "album": "Six",
+      "artist": "Six the Musical",
+      "year": 2017,
+      "tracks": [
+        "Ex-Wives",
+        "No Way",
+        "Don't Lose Ur Head",
+        "Heart of Stone",
+        "Six"
+      ]
+    },
+    {
+      "album": "The Greatest Showman",
+      "artist": "The Greatest Showman",
+      "year": 2017,
+      "tracks": [
+        "The Greatest Show",
+        "A Million Dreams",
+        "Come Alive",
+        "Never Enough",
+        "This Is Me",
+        "Rewrite the Stars"
+      ]
+    },
+    {
+      "album": "Frozen II",
+      "artist": "Frozen 2",
+      "year": 2019,
+      "tracks": [
+        "Into the Unknown",
+        "Show Yourself",
+        "All Is Found",
+        "Lost in the Woods",
+        "The Next Right Thing"
+      ]
+    },
+    {
+      "album": "Encanto",
+      "artist": "Encanto",
+      "year": 2021,
+      "tracks": [
+        "The Family Madrigal",
+        "Waiting on a Miracle",
+        "Surface Pressure",
+        "We Don't Talk About Bruno",
+        "Dos Oruguitas"
+      ]
+    }
+  ],
+  "familiarity": {
+    "Over the Rainbow": 100,
+    "Ding-Dong! The Witch Is Dead": 70,
+    "If I Only Had a Brain": 55,
+    "We're Off to See the Wizard": 65,
+    "Follow the Yellow Brick Road": 58,
+    "Maria": 65,
+    "Tonight": 60,
+    "America": 68,
+    "Somewhere": 58,
+    "Cool": 40,
+    "The Sound of Music": 78,
+    "Do-Re-Mi": 92,
+    "My Favorite Things": 88,
+    "Sixteen Going on Seventeen": 45,
+    "Edelweiss": 60,
+    "Climb Ev'ry Mountain": 48,
+    "Food, Glorious Food": 35,
+    "Consider Yourself": 32,
+    "You've Got to Pick a Pocket or Two": 22,
+    "Where Is Love?": 20,
+    "As Long as He Needs Me": 25,
+    "A Spoonful of Sugar": 82,
+    "Supercalifragilisticexpialidocious": 85,
+    "Chim Chim Cher-ee": 55,
+    "Feed the Birds": 35,
+    "Let's Go Fly a Kite": 48,
+    "Any Dream Will Do": 48,
+    "Close Every Door": 25,
+    "Go, Go, Go Joseph": 15,
+    "Those Canaan Days": 8,
+    "Summer Nights": 88,
+    "Greased Lightnin'": 75,
+    "Hopelessly Devoted to You": 68,
+    "You're the One That I Want": 85,
+    "We Go Together": 55,
+    "All That Jazz": 80,
+    "Cell Block Tango": 68,
+    "Roxie": 38,
+    "Mister Cellophane": 32,
+    "Razzle Dazzle": 42,
+    "Nowadays": 30,
+    "Tomorrow": 90,
+    "It's the Hard Knock Life": 80,
+    "Maybe": 28,
+    "Easy Street": 32,
+    "NYC": 20,
+    "I Dreamed a Dream": 88,
+    "Castle on a Cloud": 35,
+    "Master of the House": 42,
+    "Stars": 38,
+    "Do You Hear the People Sing?": 75,
+    "On My Own": 68,
+    "One Day More": 58,
+    "Bring Him Home": 48,
+    "Empty Chairs at Empty Tables": 25,
+    "Memory": 88,
+    "Mr. Mistoffelees": 20,
+    "Macavity": 22,
+    "Jellicle Songs for Jellicle Cats": 12,
+    "The Phantom of the Opera": 82,
+    "Think of Me": 42,
+    "Angel of Music": 32,
+    "The Music of the Night": 78,
+    "All I Ask of You": 65,
+    "Masquerade": 48,
+    "Part of Your World": 85,
+    "Under the Sea": 90,
+    "Poor Unfortunate Souls": 65,
+    "Kiss the Girl": 70,
+    "Belle": 68,
+    "Gaston": 52,
+    "Be Our Guest": 85,
+    "Something There": 35,
+    "Beauty and the Beast": 82,
+    "Arabian Nights": 42,
+    "Friend Like Me": 78,
+    "Prince Ali": 68,
+    "A Whole New World": 93,
+    "Circle of Life": 95,
+    "I Just Can't Wait to Be King": 58,
+    "Be Prepared": 65,
+    "Hakuna Matata": 93,
+    "Can You Feel the Love Tonight": 88,
+    "Colors of the Wind": 80,
+    "Just Around the Riverbend": 35,
+    "Mine, Mine, Mine": 22,
+    "Out There": 28,
+    "God Help the Outcasts": 25,
+    "Hellfire": 35,
+    "Seasons of Love": 82,
+    "La Vie Bohème": 42,
+    "Take Me or Leave Me": 32,
+    "Out Tonight": 25,
+    "One Song Glory": 18,
+    "Another Day": 15,
+    "Go the Distance": 58,
+    "Zero to Hero": 40,
+    "I Won't Say (I'm in Love)": 68,
+    "Reflection": 65,
+    "I'll Make a Man Out of You": 82,
+    "Honor to Us All": 28,
+    "Dancing Queen": 95,
+    "Mamma Mia": 88,
+    "Money, Money, Money": 65,
+    "The Winner Takes It All": 78,
+    "Super Trouper": 48,
+    "Take a Chance on Me": 55,
+    "Good Morning Baltimore": 32,
+    "I Can Hear the Bells": 22,
+    "Welcome to the 60's": 30,
+    "It Takes Two": 18,
+    "Big, Blonde and Beautiful": 12,
+    "I Know Where I've Been": 30,
+    "You Can't Stop the Beat": 52,
+    "No One Mourns the Wicked": 22,
+    "The Wizard and I": 38,
+    "What Is This Feeling?": 45,
+    "Dancing Through Life": 42,
+    "Popular": 78,
+    "Defying Gravity": 95,
+    "No Good Deed": 30,
+    "For Good": 68,
+    "Start of Something New": 48,
+    "Get'cha Head in the Game": 32,
+    "Stick to the Status Quo": 22,
+    "Breaking Free": 72,
+    "We're All in This Together": 60,
+    "What Time Is It": 18,
+    "You Are the Music in Me": 25,
+    "I Don't Dance": 20,
+    "Gotta Go My Own Way": 35,
+    "Bet On It": 38,
+    "Omigod You Guys": 22,
+    "Positive": 10,
+    "Chip on My Shoulder": 8,
+    "So Much Better": 15,
+    "Bend and Snap": 25,
+    "Legally Blonde": 6,
+    "Now or Never": 15,
+    "Right Here, Right Now": 20,
+    "I Want It All": 15,
+    "Can I Have This Dance": 30,
+    "Scream": 12,
+    "High School Musical": 18,
+    "Naughty": 30,
+    "When I Grow Up": 45,
+    "Revolting Children": 35,
+    "Miracle": 10,
+    "School Song": 14,
+    "When Will My Life Begin?": 38,
+    "Mother Knows Best": 48,
+    "I've Got a Dream": 32,
+    "I See the Light": 62,
+    "Hello!": 42,
+    "Turn It Off": 30,
+    "Spooky Mormon Hell Dream": 22,
+    "I Believe": 32,
+    "Let It Go": 99,
+    "Do You Want to Build a Snowman?": 80,
+    "For the First Time in Forever": 62,
+    "Love Is an Open Door": 65,
+    "In Summer": 38,
+    "Alexander Hamilton": 68,
+    "My Shot": 75,
+    "The Schuyler Sisters": 48,
+    "You'll Be Back": 65,
+    "Right Hand Man": 30,
+    "Helpless": 42,
+    "Satisfied": 48,
+    "Wait for It": 68,
+    "Yorktown (The World Turned Upside Down)": 25,
+    "Non-Stop": 28,
+    "The Room Where It Happens": 62,
+    "The Reynolds Pamphlet": 10,
+    "Burn": 40,
+    "It's Quiet Uptown": 25,
+    "Who Lives, Who Dies, Who Tells Your Story": 48,
+    "Waving Through a Window": 40,
+    "For Forever": 20,
+    "Sincerely, Me": 30,
+    "If I Could Tell Her": 22,
+    "You Will Be Found": 58,
+    "How Far I'll Go": 82,
+    "You're Welcome": 75,
+    "We Know the Way": 18,
+    "Where You Are": 25,
+    "Ex-Wives": 35,
+    "No Way": 15,
+    "Don't Lose Ur Head": 18,
+    "Heart of Stone": 22,
+    "Six": 18,
+    "The Greatest Show": 72,
+    "A Million Dreams": 80,
+    "Come Alive": 30,
+    "Never Enough": 70,
+    "This Is Me": 88,
+    "Rewrite the Stars": 58,
+    "Into the Unknown": 75,
+    "Show Yourself": 40,
+    "All Is Found": 25,
+    "Lost in the Woods": 30,
+    "The Next Right Thing": 35,
+    "The Family Madrigal": 28,
+    "Waiting on a Miracle": 25,
+    "Surface Pressure": 45,
+    "We Don't Talk About Bruno": 90,
+    "Dos Oruguitas": 15,
+    "One Jump Ahead": 60,
+    "I Think I'm Gonna Like It Here": 38,
+    "Little Girls": 48,
+    "The Mob Song": 55,
+    "Skimbleshanks: The Railway Cat": 15,
+    "The Old Gumbie Cat": 12,
+    "Funny Honey": 38,
+    "We Both Reached for the Gun": 52,
+    "When You're Good to Mama": 48,
+    "Only Us": 42,
+    "Requiem": 36,
+    "So Big / So Small": 42,
+    "Words Fail": 52,
+    "All of You": 42,
+    "What Else Can I Do?": 50,
+    "Fixer Upper": 53,
+    "Frozen Heart": 42,
+    "Some Things Never Change": 36,
+    "When I Am Older": 30,
+    "Beauty School Dropout": 62,
+    "Look at Me, I'm Sandra Dee": 50,
+    "Sandy": 38,
+    "There Are Worse Things I Could Do": 55,
+    "Ladies' Choice": 18,
+    "Mama, I'm a Big Girl Now": 32,
+    "Run and Tell That": 40,
+    "(The Legend of) Miss Baltimore Crabs": 32,
+    "The Nicest Kids in Town": 36,
+    "Timeless to Me": 36,
+    "Without Love": 28,
+    "Aaron Burr, Sir": 62,
+    "Cabinet Battle #1": 68,
+    "Dear Theodosia": 62,
+    "Farmer Refuted": 35,
+    "Guns and Ships": 62,
+    "History Has Its Eyes on You": 55,
+    "The Election of 1800": 42,
+    "Washington on Your Side": 45,
+    "What'd I Miss": 68,
+    "The Gospel Truth": 36,
+    "Bop to the Top": 45,
+    "What I've Been Looking For": 50,
+    "When There Was Me and You": 43,
+    "All for One": 42,
+    "Everyday": 48,
+    "Fabulous": 55,
+    "Work This Out": 28,
+    "A Night to Remember": 35,
+    "Just Wanna Be With You": 42,
+    "The Boys Are Back": 35,
+    "Jacob and Sons": 20,
+    "One More Angel in Heaven": 15,
+    "Blood in the Water": 10,
+    "Take It Like a Man": 9,
+    "The Harvard Variations": 7,
+    "There! Right There!": 16,
+    "What You Want": 9,
+    "Whipped Into Shape": 22,
+    "A Heart Full of Love": 62,
+    "At the End of the Day": 50,
+    "In My Life": 58,
+    "Who Am I?": 65,
+    "Gimme! Gimme! Gimme! (A Man After Midnight)": 83,
+    "Honey, Honey": 48,
+    "Lay All Your Love on Me": 70,
+    "Slipping Through My Fingers": 55,
+    "Voulez-Vous": 68,
+    "Jolly Holiday": 52,
+    "Sister Suffragette": 28,
+    "Step in Time": 62,
+    "Bruce": 48,
+    "My House": 28,
+    "Quiet": 35,
+    "Shiny": 72,
+    "A Girl Worth Fighting For": 35,
+    "I'd Do Anything": 48,
+    "Oom-Pah-Pah": 40,
+    "Reviewing the Situation": 43,
+    "Savages": 38,
+    "I'll Cover You": 62,
+    "Light My Candle": 58,
+    "Rent": 45,
+    "All You Wanna Do": 60,
+    "Get Down": 52,
+    "Haus of Holbein": 42,
+    "I Don't Need Your Love": 53,
+    "Man Up": 40,
+    "Two by Two": 28,
+    "You and Me (But Mostly Me)": 40,
+    "From Now On": 76,
+    "The Other Side": 65,
+    "Tightrope": 60,
+    "Topsy Turvy": 40,
+    "Fathoms Below": 18,
+    "Prima Donna": 50,
+    "The Point of No Return": 58,
+    "Wishing You Were Somehow Here Again": 58,
+    "So Long, Farewell": 85,
+    "The Lonely Goatherd": 65,
+    "Gee, Officer Krupke": 62,
+    "I Feel Pretty": 78,
+    "Something's Coming": 58,
+    "As Long as You're Mine": 62,
+    "I'm Not That Girl": 62,
+    "One Short Day": 55,
+    "Thank Goodness": 45
+  }
+}

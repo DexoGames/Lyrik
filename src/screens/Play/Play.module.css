@@ -77,9 +77,15 @@
     gap: 6px;
 }
 
+/* Giving up costs you something, so it warms to red rather than the accent —
+   the accent belongs to the action you actually want to take. */
 .skip {
     font-size: 0.6rem;
     letter-spacing: 0.1em;
+}
+
+.skip:hover {
+    color: var(--bad);
 }
 
 /* spells out what the hearts mean, in the catalogue's own noun */
