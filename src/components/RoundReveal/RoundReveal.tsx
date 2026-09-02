@@ -56,7 +56,7 @@ export function RoundReveal({ song, round, copy, nextLabel, onNext, guessTitles 
       <div className={styles.facts}>
         <span>
           <b>{round.snippet.len}</b> words
-          {extra > 0 ? ` (${extra} revealed)` : " — no reveals"}
+          {extra > 0 ? ` (${extra} revealed)` : " - no reveals"}
         </span>
         <span>
           <b>{round.guesses.length}</b> wrong

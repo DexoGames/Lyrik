@@ -50,8 +50,8 @@ export function CatalogueHub({ library, onHelp }: Props) {
           Guess the song<span className={styles.dot}>.</span>
         </h1>
         <p className={styles.blurb}>
-          {MIN_WORDS} words from anywhere in a song — no punctuation, no line breaks, no idea
-          where the line began. Stuck? Take one more from before or after, up to {MAX_WORDS}. The
+          {MIN_WORDS} words from anywhere in a song, ignoring punctuation and line breaks.
+          Stuck? Take one more from before or after, up to {MAX_WORDS}. The
           fewer you need, the higher you score.
         </p>
         <button className={styles.howto} onClick={onHelp}>
@@ -76,9 +76,6 @@ export function CatalogueHub({ library, onHelp }: Props) {
         <div className={styles.soon}>
           <span className={styles.soonMark}>+</span>
           <b>More to come</b>
-          <span>
-            Each catalogue brings its own look, its own wording and its own records.
-          </span>
         </div>
       </section>
 

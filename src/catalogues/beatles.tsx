@@ -32,11 +32,9 @@ export const BEATLES: CatalogueDef = {
 
   copy: {
     ...DEFAULT_COPY,
-    tagline: "Four lads. Two hundred-odd songs. Three words.",
+    tagline: " ",
     intro:
-      "The thirteen studio albums, Magical Mystery Tour, the singles and B-sides, " +
-      "and the three that arrived decades late. Every one of them properly released — " +
-      "and every one of them fair game.",
+      "From the lovable mop-tops, to the colourful pioneers, to the jaded rockstars. The Beatles are arguably the band with the biggest range in such a short time. Can you identify lyrics from all eras of The Fab Four??",
 
     // A bad guess costs you a take, which is what it would have cost them.
     life: { one: "take", many: "takes" },
@@ -54,22 +52,22 @@ export const BEATLES: CatalogueDef = {
       { min: 0.8, label: "Fab", blurb: "You barely needed the words." },
       { min: 0.6, label: "Getting Better", blurb: "Solid. A reveal here and there." },
       { min: 0.4, label: "Help!", blurb: "You got there. Eventually." },
-      { min: 0.01, label: "Act Naturally", blurb: "Rough day at the record shop." },
+      { min: 0.01, label: "Act Naturally", blurb: "A hard day's night." },
       { min: 0, label: "Misery", blurb: "Tomorrow is another song." },
     ],
 
     modes: {
       daily: {
         tag: "5 songs",
-        blurb: "The same five for everybody, once a day. One go, then a grid worth sharing.",
+        blurb: "A different challenge from Yesterday to today.",
       },
       run: {
         tag: "3 takes",
-        blurb: "Keep naming them. Three bad takes and the session is over.",
+        blurb: "Get to the bottom and go back to the top of the slide.",
       },
       practice: {
         tag: "no stakes",
-        blurb: "Song after song, nothing recorded. Good for learning the deep cuts.",
+        blurb: "Hone your craft like the good ol' musty days in Hamburg.",
       },
     },
 

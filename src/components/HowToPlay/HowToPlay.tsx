@@ -35,14 +35,14 @@ export function HowToPlay({ open, onClose, catalogue }: Props) {
         <span className={styles.demoEdge}>…</span>
       </div>
       <p className={styles.caption}>
-        The window can open mid-line or straddle two — that is the point.
+        The window can open mid-line or straddle two.
       </p>
 
       <h3 className={styles.h}>Stuck?</h3>
       <p className={styles.p}>
         Take another word from <b>before</b> or <b>after</b> the run you can see. Take one
         before, and the next &ldquo;before&rdquo; pulls the word before <em>that</em>. You can
-        grow to <b>{MAX_WORDS} words</b> — no further.
+        grow to <b>{MAX_WORDS} words</b>.
       </p>
 
       <h3 className={styles.h}>Scoring</h3>
@@ -57,14 +57,14 @@ export function HowToPlay({ open, onClose, catalogue }: Props) {
         ))}
       </div>
       <p className={styles.p}>
-        Every reveal costs you. So does a miss: your second guess scores 70%, your third 45%,
+        Revealing more words decreases your score, as well as guessing wrong.
+        Your second guess scores 70%, your third 45%,
         and after <b>{MAX_GUESSES}</b> wrong the song is gone.
       </p>
 
       <h3 className={styles.h}>Catalogues &amp; modes</h3>
       <p className={styles.p}>
-        A <b>catalogue</b> is one artist&apos;s body of work — its own songs, its own look, its
-        own records. Inside one you pick a mode:
+        A <b>catalogue</b> is a themed set of songs. Each catalogue has the same modes:
       </p>
       <ul className={styles.modes}>
         <li>

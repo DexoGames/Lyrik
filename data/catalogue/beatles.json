@@ -1,13 +1,11 @@
 {
   "artist": "The Beatles",
   "slug": "the-beatles",
-  "note": "Officially released Beatles recordings: the 13 UK studio LPs, Magical Mystery Tour, the four new Yellow Submarine songs, the non-album singles and EP tracks collected on Past Masters, and the three Anthology-era singles. Titles/albums/years only - lyric text is fetched at build time and never stored in this repo.",
+  "note": "From the lovable mop-tops, to the colourful pioneers, to the jaded rockstars. Guess lyrics from all eras of The Beatles (even Anthology!)",
   "skip": [
     "Flying",
     "Revolution 9",
-    "Dig It",
-    "Maggie Mae",
-    "Wild Honey Pie"
+    "Dig It"
   ],
   "releases": [
     {
@@ -31,6 +29,22 @@
       ]
     },
     {
+      "album": "From Me to You (single)",
+      "year": 1963,
+      "tracks": [
+        "From Me to You",
+        "Thank You Girl"
+      ]
+    },
+    {
+      "album": "She Loves You (single)",
+      "year": 1963,
+      "tracks": [
+        "She Loves You",
+        "I'll Get You"
+      ]
+    },
+    {
       "album": "With the Beatles",
       "year": 1963,
       "tracks": [
@@ -48,6 +62,32 @@
         "Devil in Her Heart",
         "Not a Second Time",
         "Money (That's What I Want)"
+      ]
+    },
+    {
+      "album": "I Want to Hold Your Hand (single)",
+      "year": 1963,
+      "tracks": [
+        "I Want to Hold Your Hand",
+        "This Boy"
+      ]
+    },
+    {
+      "album": "Komm, Gib Mir Deine Hand (single)",
+      "year": 1964,
+      "tracks": [
+        "Komm, Gib Mir Deine Hand",
+        "Sie Liebt Dich"
+      ]
+    },
+    {
+      "album": "Long Tall Sally (EP)",
+      "year": 1964,
+      "tracks": [
+        "Long Tall Sally",
+        "I Call Your Name",
+        "Slow Down",
+        "Matchbox"
       ]
     },
     {
@@ -70,6 +110,14 @@
       ]
     },
     {
+      "album": "I Feel Fine (single)",
+      "year": 1964,
+      "tracks": [
+        "I Feel Fine",
+        "She's a Woman"
+      ]
+    },
+    {
       "album": "Beatles for Sale",
       "year": 1964,
       "tracks": [
@@ -87,6 +135,20 @@
         "I Don't Want to Spoil the Party",
         "What You're Doing",
         "Everybody's Trying to Be My Baby"
+      ]
+    },
+    {
+      "album": "Ticket to Ride (single)",
+      "year": 1965,
+      "tracks": [
+        "Yes It Is"
+      ]
+    },
+    {
+      "album": "Help! (single)",
+      "year": 1965,
+      "tracks": [
+        "I'm Down"
       ]
     },
     {
@@ -127,6 +189,22 @@
         "Wait",
         "If I Needed Someone",
         "Run for Your Life"
+      ]
+    },
+    {
+      "album": "Day Tripper / We Can Work It Out (single)",
+      "year": 1965,
+      "tracks": [
+        "Day Tripper",
+        "We Can Work It Out"
+      ]
+    },
+    {
+      "album": "Paperback Writer (single)",
+      "year": 1966,
+      "tracks": [
+        "Paperback Writer",
+        "Rain"
       ]
     },
     {
@@ -184,6 +262,22 @@
       ]
     },
     {
+      "album": "Lady Madonna (single)",
+      "year": 1968,
+      "tracks": [
+        "Lady Madonna",
+        "The Inner Light"
+      ]
+    },
+    {
+      "album": "Hey Jude (single)",
+      "year": 1968,
+      "tracks": [
+        "Hey Jude",
+        "Revolution"
+      ]
+    },
+    {
       "album": "The Beatles (White Album)",
       "year": 1968,
       "tracks": [
@@ -191,6 +285,7 @@
         "Dear Prudence",
         "Glass Onion",
         "Ob-La-Di, Ob-La-Da",
+        "Wild Honey Pie",
         "The Continuing Story of Bungalow Bill",
         "While My Guitar Gently Weeps",
         "Happiness Is a Warm Gun",
@@ -228,6 +323,21 @@
       ]
     },
     {
+      "album": "Get Back (single)",
+      "year": 1969,
+      "tracks": [
+        "Don't Let Me Down"
+      ]
+    },
+    {
+      "album": "The Ballad of John and Yoko (single)",
+      "year": 1969,
+      "tracks": [
+        "The Ballad of John and Yoko",
+        "Old Brown Shoe"
+      ]
+    },
+    {
       "album": "Abbey Road",
       "year": 1969,
       "tracks": [
@@ -251,6 +361,13 @@
       ]
     },
     {
+      "album": "Let It Be (single)",
+      "year": 1970,
+      "tracks": [
+        "You Know My Name (Look Up the Number)"
+      ]
+    },
+    {
       "album": "Let It Be",
       "year": 1970,
       "tracks": [
@@ -259,6 +376,7 @@
         "Across the Universe",
         "I Me Mine",
         "Let It Be",
+        "Maggie Mae",
         "I've Got a Feeling",
         "One After 909",
         "The Long and Winding Road",
@@ -270,35 +388,7 @@
       "album": "Past Masters",
       "year": 1988,
       "tracks": [
-        "From Me to You",
-        "Thank You Girl",
-        "She Loves You",
-        "I'll Get You",
-        "I Want to Hold Your Hand",
-        "This Boy",
-        "Komm, Gib Mir Deine Hand",
-        "Sie Liebt Dich",
-        "Long Tall Sally",
-        "I Call Your Name",
-        "Slow Down",
-        "Matchbox",
-        "I Feel Fine",
-        "She's a Woman",
-        "Bad Boy",
-        "Yes It Is",
-        "I'm Down",
-        "Day Tripper",
-        "We Can Work It Out",
-        "Paperback Writer",
-        "Rain",
-        "Lady Madonna",
-        "The Inner Light",
-        "Hey Jude",
-        "Revolution",
-        "Don't Let Me Down",
-        "The Ballad of John and Yoko",
-        "Old Brown Shoe",
-        "You Know My Name (Look Up the Number)"
+        "Bad Boy"
       ]
     },
     {
