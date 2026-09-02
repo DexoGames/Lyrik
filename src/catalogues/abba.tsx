@@ -60,7 +60,7 @@ export const ABBA: CatalogueDef = {
     ...DEFAULT_COPY,
     tagline: " ",
     intro:
-      "From a Eurovision-winning Waterloo to the best-selling pop act of the 70s. Two songwriters, four voices, a run of three-minute pop songs that never really left the charts. Can you name the tune from three words?",
+      "Everyone loves ABBA, right? But do you love them enough??",
 
     // A bad guess spends a chance, which is all the invitation the title needs.
     life: { one: "chance", many: "chances" },
@@ -74,18 +74,18 @@ export const ABBA: CatalogueDef = {
     // The ladder runs from the spotlight down to the idiom Waterloo actually
     // means, whatever the song itself sounds like.
     grades: [
-      { min: 0.95, label: "Super Trouper", blurb: "Every spotlight found you." },
-      { min: 0.8, label: "Dancing Queen", blurb: "You barely needed the words." },
-      { min: 0.6, label: "Take a Chance on Me", blurb: "Solid. A reveal here and there." },
-      { min: 0.4, label: "Knowing Me, Knowing You", blurb: "You got there. Eventually." },
-      { min: 0.01, label: "S.O.S.", blurb: "Distress signal sent." },
-      { min: 0, label: "Waterloo", blurb: "Tomorrow is another song." },
+      { min: 0.95, label: "Super Trouper", blurb: "You are they someone in the crowd!" },
+      { min: 0.8, label: "Dancing Queen", blurb: "You could dance and jive" },
+      { min: 0.6, label: "Take a Chance on Me", blurb: "An impressive effort" },
+      { min: 0.4, label: "Knowing Me, Knowing You", blurb: "Is that the best you can do?" },
+      { min: 0.01, label: "S.O.S.", blurb: "Distress signal sent" },
+      { min: 0, label: "Waterloo", blurb: "You were defeated" },
     ],
 
     modes: {
       daily: {
         tag: "5 songs",
-        blurb: "The same five for everyone. One go, then a grid to share.",
+        blurb: "Come back every day and compare with friends!",
       },
       run: {
         tag: "3 chances",

@@ -1,0 +1,312 @@
+{
+  "artist": "Indie Revival",
+  "slug": "indie-revival",
+  "note": "The new wave of Irish & UK guitar bands, 2019 onward — post-punk sneer and stadium-sized indie side by side. Each act is credited on its own release, since this catalogue is a scene, not a single band.",
+  "skip": [],
+  "releases": [
+    {
+      "album": "Dogrel",
+      "artist": "Fontaines D.C.",
+      "year": 2019,
+      "tracks": [
+        "Big",
+        "Sha Sha Sha",
+        "Too Real",
+        "Liberty Belle",
+        "Roy's Tune",
+        "Television Screens",
+        "Hurricane Laughter",
+        "Chequeless Reckless",
+        "Boys in the Better Land",
+        "Dublin City Sky",
+        "Winding Stream"
+      ]
+    },
+    {
+      "album": "A Hero's Death",
+      "artist": "Fontaines D.C.",
+      "year": 2020,
+      "tracks": [
+        "I Don't Belong",
+        "Love Is the Main Thing",
+        "Televised Mind",
+        "A Lucid Dream",
+        "You Said",
+        "Oh Such a Spring",
+        "A Hero's Death",
+        "Living in America",
+        "I Was Not Born",
+        "Sunny",
+        "No"
+      ]
+    },
+    {
+      "album": "Skinty Fia",
+      "artist": "Fontaines D.C.",
+      "year": 2022,
+      "tracks": [
+        "In ár gCroíthe go deo",
+        "Big Shot",
+        "How Cold Love Is",
+        "Jackie Down the Line",
+        "Bloomsday",
+        "Roman Holiday",
+        "The Couple Across the Way",
+        "Skinty Fia",
+        "I Love You",
+        "Nabokov"
+      ]
+    },
+    {
+      "album": "Romance",
+      "artist": "Fontaines D.C.",
+      "year": 2024,
+      "tracks": [
+        "Romance",
+        "Concrete",
+        "Starburster",
+        "Here's the Thing",
+        "Desire",
+        "In the Modern World",
+        "Motorcycle Boy",
+        "Sundowner",
+        "Bug",
+        "Death Kink",
+        "Favourite"
+      ]
+    },
+    {
+      "album": "Cub",
+      "artist": "Wunderhorse",
+      "year": 2022,
+      "tracks": [
+        "Teal",
+        "Silver",
+        "Butterflies",
+        "Purple",
+        "Rain",
+        "Cub",
+        "Leader of the Pack",
+        "Poppy"
+      ]
+    },
+    {
+      "album": "Midas",
+      "artist": "Wunderhorse",
+      "year": 2024,
+      "tracks": [
+        "Midas",
+        "Girl Behind The Glass",
+        "Atlantis",
+        "Emily",
+        "Arizona",
+        "Girl",
+        "Fool"
+      ]
+    },
+    {
+      "album": "It Won't Always Be Like This",
+      "artist": "Inhaler",
+      "year": 2021,
+      "tracks": [
+        "It Won't Always Be Like This",
+        "My Honest Face",
+        "Cheer Up Baby",
+        "Falling In",
+        "Who's Your Money On (Plastic House)",
+        "When It Breaks",
+        "In My Sleep",
+        "A Question of You",
+        "Slide Out the Window",
+        "Grow Up",
+        "Every Time You Get Up",
+        "We Have to Move On"
+      ]
+    },
+    {
+      "album": "Cuts & Bruises",
+      "artist": "Inhaler",
+      "year": 2023,
+      "tracks": [
+        "Just to Keep You Satisfied",
+        "These Are the Days",
+        "If You're Gonna Break My Heart",
+        "Love Will Get You There",
+        "Dublin in Ecstasy",
+        "Now You Got Me"
+      ]
+    },
+    {
+      "album": "Open Wide",
+      "artist": "Inhaler",
+      "year": 2025,
+      "tracks": [
+        "Eddie In The Darkness",
+        "When I Have Her On My Mind"
+      ]
+    },
+    {
+      "album": "A Shot in the Dark",
+      "artist": "The Royston Club",
+      "year": 2023,
+      "tracks": [
+        "Shivers",
+        "The Patch Where Nothing Grows",
+        "Everybody Wants You",
+        "Wasting Time",
+        "Overgrown",
+        "Best Excuse"
+      ]
+    },
+    {
+      "album": "Come and See",
+      "artist": "Gurriers",
+      "year": 2024,
+      "tracks": [
+        "Top Of The Bill",
+        "Approachable",
+        "Des",
+        "Prayers",
+        "C'mon C'mon",
+        "Michelangelo"
+      ]
+    },
+    {
+      "album": "Singles",
+      "artist": "overpass",
+      "year": 2023,
+      "tracks": [
+        "3AM",
+        "Take It Or Leave It",
+        "Be Good To Yourself",
+        "Right Time"
+      ]
+    },
+    {
+      "album": "Singles",
+      "artist": "Keo",
+      "year": 2023,
+      "tracks": [
+        "I Lied, Amber",
+        "Thorn",
+        "Stolen Cars"
+      ]
+    },
+    {
+      "album": "Singles",
+      "artist": "Basht.",
+      "year": 2023,
+      "tracks": [
+        "Dirty White",
+        "Gone Girl",
+        "Wild Horses",
+        "Bitter and Twisted",
+        "TIAY"
+      ]
+    }
+  ],
+  "familiarity": {
+    "Big": 55,
+    "Sha Sha Sha": 25,
+    "Too Real": 60,
+    "Liberty Belle": 45,
+    "Roy's Tune": 30,
+    "Television Screens": 35,
+    "Hurricane Laughter": 40,
+    "Chequeless Reckless": 42,
+    "Boys in the Better Land": 70,
+    "Dublin City Sky": 38,
+    "Winding Stream": 20,
+    "I Don't Belong": 45,
+    "Love Is the Main Thing": 40,
+    "Televised Mind": 55,
+    "A Lucid Dream": 65,
+    "You Said": 30,
+    "Oh Such a Spring": 22,
+    "A Hero's Death": 72,
+    "Living in America": 35,
+    "I Was Not Born": 28,
+    "Sunny": 32,
+    "No": 20,
+    "In ár gCroíthe go deo": 45,
+    "Big Shot": 78,
+    "How Cold Love Is": 40,
+    "Jackie Down the Line": 82,
+    "Bloomsday": 38,
+    "Roman Holiday": 42,
+    "The Couple Across the Way": 35,
+    "Skinty Fia": 50,
+    "I Love You": 68,
+    "Nabokov": 30,
+    "Romance": 55,
+    "Concrete": 40,
+    "Starburster": 88,
+    "Here's the Thing": 45,
+    "Desire": 60,
+    "In the Modern World": 42,
+    "Motorcycle Boy": 38,
+    "Sundowner": 35,
+    "Bug": 32,
+    "Death Kink": 40,
+    "Favourite": 50,
+    "Teal": 85,
+    "Silver": 55,
+    "Butterflies": 48,
+    "Purple": 45,
+    "Rain": 42,
+    "Cub": 38,
+    "Leader of the Pack": 40,
+    "Poppy": 35,
+    "Midas": 65,
+    "Girl Behind The Glass": 40,
+    "Atlantis": 45,
+    "Emily": 50,
+    "Arizona": 42,
+    "Girl": 38,
+    "Fool": 40,
+    "It Won't Always Be Like This": 70,
+    "My Honest Face": 45,
+    "Cheer Up Baby": 90,
+    "Falling In": 40,
+    "Who's Your Money On (Plastic House)": 38,
+    "When It Breaks": 42,
+    "In My Sleep": 45,
+    "A Question of You": 35,
+    "Slide Out the Window": 38,
+    "Grow Up": 40,
+    "Every Time You Get Up": 32,
+    "We Have to Move On": 35,
+    "Just to Keep You Satisfied": 55,
+    "These Are the Days": 60,
+    "If You're Gonna Break My Heart": 48,
+    "Love Will Get You There": 52,
+    "Dublin in Ecstasy": 38,
+    "Now You Got Me": 35,
+    "Eddie In The Darkness": 30,
+    "When I Have Her On My Mind": 28,
+    "Shivers": 55,
+    "The Patch Where Nothing Grows": 30,
+    "Everybody Wants You": 40,
+    "Wasting Time": 42,
+    "Overgrown": 35,
+    "Best Excuse": 32,
+    "Top Of The Bill": 35,
+    "Approachable": 40,
+    "Des": 25,
+    "Prayers": 28,
+    "C'mon C'mon": 30,
+    "Michelangelo": 32,
+    "3AM": 35,
+    "Take It Or Leave It": 32,
+    "Be Good To Yourself": 30,
+    "Right Time": 28,
+    "I Lied, Amber": 30,
+    "Thorn": 25,
+    "Stolen Cars": 28,
+    "Dirty White": 32,
+    "Gone Girl": 30,
+    "Wild Horses": 28,
+    "Bitter and Twisted": 25,
+    "TIAY": 22
+  }
+}

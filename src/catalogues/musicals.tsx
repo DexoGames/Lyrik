@@ -71,15 +71,15 @@ export const MUSICALS: CatalogueDef = {
     modes: {
       daily: {
         tag: "5 songs",
-        blurb: "Five numbers, one performance, no second night.",
+        blurb: "Come back every day and compare with friends!",
       },
       run: {
         tag: "3 curtain calls",
-        blurb: "Keep going until the house lights come up.",
+        blurb: "Don't stop dancing.",
       },
       practice: {
         tag: "no stakes",
-        blurb: "The rehearsal room. Nobody is taking notes.",
+        blurb: "The dress rehearsal.",
       },
     },
 

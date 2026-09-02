@@ -35,9 +35,11 @@ function makeSet(count = 12): SongSet {
     id: "test",
     songs,
     byId: new Map(songs.map((s) => [s.id, s])),
+    multiArtist: false,
     options: songs.map((s) => ({
       id: s.id,
       title: s.title,
+      artist: s.artist,
       album: s.album,
       year: s.year,
       search: s.title.toLowerCase(),

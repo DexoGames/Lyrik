@@ -23,6 +23,7 @@ interface RawPayload {
 export interface SongOption {
   id: string;
   title: string;
+  artist: string;
   album: string | null;
   year: number | null;
   /** lowercase haystack for the guess box */
@@ -35,6 +36,8 @@ export interface SongSet {
   songs: Song[];
   byId: Map<string, Song>;
   options: SongOption[];
+  /** True when this catalogue is a collection credited to more than one act. */
+  multiArtist: boolean;
 }
 
 export interface Library {
@@ -68,14 +71,20 @@ function buildSet(id: string, songs: Song[]): SongSet {
     id,
     songs,
     byId: new Map(songs.map((s) => [s.id, s])),
+    // A collection credited to more than one act — Musicals, Indie Revival —
+    // shows the artist alongside the title instead of hiding it as it does
+    // for a single-artist catalogue, where it's already the page's name.
+    multiArtist: new Set(songs.map((s) => s.artist)).size > 1,
     options: songs
       .map((s) => ({
         id: s.id,
         title: s.title,
+        artist: s.artist,
         album: s.album,
         year: s.year,
-        // album is searchable too: typing "abbey" narrows to that record
-        search: `${searchKey(s.title)} ${searchKey(s.album ?? "")}`,
+        // artist and album are searchable too: typing "fontaines" or "abbey"
+        // narrows the list just as typing a title does
+        search: `${searchKey(s.title)} ${searchKey(s.artist)} ${searchKey(s.album ?? "")}`,
       }))
       .sort((a, b) => a.title.localeCompare(b.title)),
   };

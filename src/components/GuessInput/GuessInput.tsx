@@ -15,6 +15,8 @@ interface Props {
   shakeKey: number;
   /** Focus on mount and after every round change. */
   autoFocus?: boolean;
+  /** Show the artist (then album) instead of just the album — for a catalogue that's a multi-act collection. */
+  multiArtist?: boolean;
 }
 
 export function GuessInput({
@@ -25,6 +27,7 @@ export function GuessInput({
   onGuess,
   shakeKey,
   autoFocus,
+  multiArtist = false,
 }: Props) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
@@ -135,7 +138,11 @@ export function GuessInput({
                   disabled={used}
                 >
                   <span className={styles.optTitle}>{o.title}</span>
-                  {o.album && <span className={styles.optAlbum}>{o.album}</span>}
+                  {(multiArtist ? o.artist : o.album) && (
+                    <span className={styles.optMeta}>
+                      {multiArtist ? (o.album ? `${o.artist} · ${o.album}` : o.artist) : o.album}
+                    </span>
+                  )}
                   {used && <span className={styles.optTag}>tried</span>}
                 </button>
               </li>

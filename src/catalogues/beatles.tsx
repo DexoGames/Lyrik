@@ -59,12 +59,12 @@ export const BEATLES: CatalogueDef = {
     // Grades borrow their names from the records. The ladder still reads as a
     // ladder if you have never heard of any of them.
     grades: [
-      { min: 0.95, label: "Toppermost", blurb: "The toppermost of the poppermost." },
-      { min: 0.8, label: "Fab", blurb: "You barely needed the words." },
-      { min: 0.6, label: "Getting Better", blurb: "Solid. A reveal here and there." },
-      { min: 0.4, label: "Help!", blurb: "You got there. Eventually." },
-      { min: 0.01, label: "Act Naturally", blurb: "A hard day's night." },
-      { min: 0, label: "Misery", blurb: "Tomorrow is another song." },
+      { min: 0.95, label: "No. 1", blurb: "George Martin would be proud" },
+      { min: 0.8, label: "Na Na Na Na", blurb: "You took a sad song and made it better!" },
+      { min: 0.6, label: "Getting Better", blurb: "Doing the best you can" },
+      { min: 0.4, label: "Help!", blurb: "It seems like you need somebody" },
+      { min: 0.01, label: "Act Naturally", blurb: "A sad and lonely score" },
+      { min: 0, label: "Misery", blurb: "" },
     ],
 
     modes: {

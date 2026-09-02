@@ -171,6 +171,7 @@ export function Play({ mode, catalogue, set, onStats }: Props) {
                     nextLabel={nextLabel}
                     onNext={next}
                     guessTitles={guessTitles}
+                    multiArtist={set.multiArtist}
                   />
                 </motion.div>
               ) : (
@@ -188,6 +189,7 @@ export function Play({ mode, catalogue, set, onStats }: Props) {
                     onGuess={onGuess}
                     shakeKey={shakeKey}
                     autoFocus
+                    multiArtist={set.multiArtist}
                   />
                   <Button variant="ghost" onClick={skip} className={styles.skip}>
                     <IconSkip size={13} />

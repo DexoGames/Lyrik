@@ -17,9 +17,19 @@ interface Props {
   onNext: () => void;
   /** Wrong guesses, resolved to titles for the miss list. */
   guessTitles: string[];
+  /** Show the artist alongside the album — for a catalogue that's a multi-act collection. */
+  multiArtist?: boolean;
 }
 
-export function RoundReveal({ song, round, copy, nextLabel, onNext, guessTitles }: Props) {
+export function RoundReveal({
+  song,
+  round,
+  copy,
+  nextLabel,
+  onNext,
+  guessTitles,
+  multiArtist = false,
+}: Props) {
   const won = round.status === "won";
   const extra = round.snippet.len - MIN_WORDS;
   // Keyed off the window so the line is stable for the life of the round.
@@ -49,7 +59,9 @@ export function RoundReveal({ song, round, copy, nextLabel, onNext, guessTitles 
 
       <h3 className={styles.title}>{song.title}</h3>
       <p className={styles.meta}>
-        {song.album ?? song.artist}
+        {multiArtist
+          ? [song.artist, song.album].filter(Boolean).join(" · ")
+          : (song.album ?? song.artist)}
         {song.year ? ` · ${song.year}` : ""}
       </p>
 

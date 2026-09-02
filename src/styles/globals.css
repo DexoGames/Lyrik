@@ -114,6 +114,15 @@
     --glow: rgba(47, 128, 237, 0.13);
 }
 
+.theme-indie-revival {
+    /* Photocopied-flyer orange. */
+    --accent: #ff5a1f;
+    --accent-deep: #c93f10;
+    --accent-ink: #2b0c02;
+    --accent-soft: rgba(255, 90, 31, 0.14);
+    --glow: rgba(255, 90, 31, 0.13);
+}
+
 * {
     margin: 0;
     padding: 0;
