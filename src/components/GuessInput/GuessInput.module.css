@@ -1,0 +1,151 @@
+.wrap {
+    position: relative;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    align-items: stretch;
+    background: var(--black-soft);
+    border: 2px solid var(--line-strong);
+    transition: border-color 0.15s ease;
+}
+
+.field:focus-within {
+    border-color: var(--accent);
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 14px;
+    background: transparent;
+    border: none;
+    color: var(--bone);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    /* 16px+ stops iOS Safari zooming the page on focus */
+}
+
+.input::placeholder {
+    color: var(--bone-faint);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:disabled {
+    opacity: 0.5;
+}
+
+.tries {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 14px;
+    border-left: 2px solid var(--line-on-black);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--bone-dim);
+    user-select: none;
+}
+
+.tries em {
+    font-style: normal;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bone-faint);
+}
+
+.triesLow {
+    color: var(--bad);
+}
+
+.triesLow em {
+    color: var(--bad);
+    opacity: 0.7;
+}
+
+.list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 6px);
+    z-index: 60;
+    list-style: none;
+    max-height: 292px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--black-soft-2);
+    border: 2px solid var(--accent);
+    box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.55);
+}
+
+.opt {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--line-on-black);
+    text-align: left;
+    cursor: pointer;
+}
+
+.opt:last-child {
+    border-bottom: none;
+}
+
+.optHi {
+    background: var(--accent-soft);
+}
+
+.optTitle {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--bone);
+}
+
+.optAlbum {
+    margin-left: auto;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    color: var(--bone-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 45%;
+}
+
+.optUsed {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.optUsed .optTitle {
+    text-decoration: line-through;
+}
+
+.optTag {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bad);
+}
+
+@media (max-width: 620px) {
+    .input {
+        font-size: 16px;
+        padding: 13px 12px;
+    }
+
+    .list {
+        max-height: 244px;
+    }
+}

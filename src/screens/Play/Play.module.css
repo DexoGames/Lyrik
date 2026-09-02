@@ -1,0 +1,108 @@
+.play {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 20px var(--gutter) calc(40px + var(--safe-b));
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.headLeft {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+.back {
+    display: flex;
+    align-self: center;
+    padding: 5px;
+    margin-left: -5px;
+    color: var(--bone-dim);
+    text-decoration: none;
+}
+
+.back:hover {
+    color: var(--accent);
+}
+
+.mode {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.catalogue {
+    padding-left: 10px;
+    border-left: 1px solid var(--line-strong);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-faint);
+    white-space: nowrap;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.guessRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.skip {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+}
+
+/* spells out what the hearts mean, in the catalogue's own noun */
+.livesNote {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.58rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-faint);
+}
+
+@media (max-width: 620px) {
+    .play {
+        padding: 14px var(--gutter) calc(28px + var(--safe-b));
+    }
+
+    .round {
+        gap: 13px;
+    }
+
+    .catalogue {
+        display: none;
+    }
+}

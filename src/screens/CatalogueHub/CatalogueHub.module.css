@@ -1,0 +1,322 @@
+.hub {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 34px var(--gutter) calc(40px + var(--safe-b));
+}
+
+/* --- hero --- */
+.hero {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.tape {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: var(--black-soft);
+    border: 2px solid var(--line-strong);
+    margin-bottom: 22px;
+}
+
+.tapeEdge {
+    color: var(--bone-faint);
+    font-size: 1rem;
+}
+
+.tapeWord {
+    position: relative;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    color: var(--bone);
+}
+
+.tapeWord::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: 0.06em;
+    height: 0.42em;
+    background: var(--accent);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 9vw, 3.6rem);
+    line-height: 1;
+    color: var(--bone);
+    margin-bottom: 14px;
+}
+
+.dot {
+    color: var(--accent);
+}
+
+.blurb {
+    max-width: 54ch;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--bone-dim);
+}
+
+.howto {
+    margin-top: 16px;
+    padding: 6px 2px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone);
+    cursor: pointer;
+}
+
+.howto:hover {
+    color: var(--accent);
+}
+
+/* --- shelf --- */
+.sectionHead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 7px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone);
+}
+
+.sectionHead em {
+    font-style: normal;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--bone-faint);
+}
+
+.shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 14px;
+}
+
+/* Each card wears its own catalogue theme, so the shelf previews the skins. */
+.card {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    height: 100%;
+    background: var(--black-soft);
+    border: 2px solid var(--line-on-black);
+    border-left: 4px solid var(--accent);
+    color: var(--bone);
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+}
+
+.cardOff {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cardArt {
+    display: grid;
+    place-items: center;
+    flex: 0 0 108px;
+    padding: 16px 12px;
+    background:
+        radial-gradient(circle at 40% 30%, var(--accent-soft), transparent 70%),
+        var(--black-soft-2);
+    border-right: 2px solid var(--line-on-black);
+    color: var(--accent);
+}
+
+.motif {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover .motif {
+    animation: stride 0.9s ease-in-out infinite;
+}
+
+@keyframes stride {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    min-width: 0;
+    padding: 16px 16px 14px;
+}
+
+.cardTop {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cardName {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--accent);
+}
+
+.cardCount {
+    font-size: 0.56rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-faint);
+    white-space: nowrap;
+}
+
+.cardTag {
+    flex: 1;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--bone-dim);
+}
+
+.cardFoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.cardCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+}
+
+.card:hover .cardCta::after {
+    content: "→";
+}
+
+.cardStreak {
+    font-style: normal;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.cardPending {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--bone-faint);
+}
+
+/* the empty slot on the shelf */
+.soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 18px;
+    border: 2px dashed var(--line-on-black);
+    text-align: left;
+}
+
+.soonMark {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--bone-faint);
+}
+
+.soon b {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-dim);
+}
+
+.soon span:last-child {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: var(--bone-faint);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line-on-black);
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    color: var(--bone-faint);
+}
+
+.footer a {
+    color: var(--bone-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+}
+
+.footer a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (max-width: 560px) {
+    .hub {
+        padding: 24px var(--gutter) calc(32px + var(--safe-b));
+    }
+
+    .shelf {
+        grid-template-columns: 1fr;
+    }
+
+    .cardArt {
+        flex-basis: 84px;
+    }
+
+    .footer {
+        justify-content: center;
+        text-align: center;
+    }
+}

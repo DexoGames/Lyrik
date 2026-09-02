@@ -1,0 +1,11 @@
+node_modules
+dist
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+
+# Fetched lyric text is third-party content — it is pulled at build time and
+# never committed. `npm run songs` regenerates both of these.
+data/raw/
+public/data/songs.json

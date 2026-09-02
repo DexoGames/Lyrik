@@ -1,0 +1,105 @@
+.hud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 30px;
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- daily: one pip per round, coloured by how few words it took --- */
+.pips {
+    display: flex;
+    gap: 5px;
+}
+
+.pip {
+    width: 26px;
+    height: 7px;
+    background: var(--black-soft-2);
+    border: 1px solid var(--line-on-black);
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.pip[data-bucket="3"] { background: var(--w3); border-color: var(--w3); }
+.pip[data-bucket="4"] { background: var(--w4); border-color: var(--w4); }
+.pip[data-bucket="5"] { background: var(--w5); border-color: var(--w5); }
+.pip[data-bucket="6"] { background: var(--w6); border-color: var(--w6); }
+.pip[data-bucket="x"] { background: var(--wx); border-color: var(--wx); }
+
+.pipNow {
+    border-color: var(--accent);
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+/* --- run: lives --- */
+.lives {
+    display: flex;
+    gap: 5px;
+    color: var(--bad);
+}
+
+.life {
+    display: flex;
+}
+
+.lifeGone {
+    color: var(--bone-faint);
+    opacity: 0.4;
+}
+
+.tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-faint);
+}
+
+.streak {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 7px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.total {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    line-height: 1;
+    color: var(--bone);
+}
+
+.pending {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+    .pip {
+        width: 20px;
+    }
+
+    .pending {
+        font-size: 0.55rem;
+        letter-spacing: 0.06em;
+    }
+}

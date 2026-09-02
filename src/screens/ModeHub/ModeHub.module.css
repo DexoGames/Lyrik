@@ -1,0 +1,252 @@
+.hub {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 20px var(--gutter) calc(40px + var(--safe-b));
+}
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-dim);
+    text-decoration: none;
+}
+
+.back:hover {
+    color: var(--accent);
+}
+
+/* --- catalogue header --- */
+.head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.art {
+    display: grid;
+    place-items: center;
+    flex: 0 0 130px;
+    padding: 18px 14px;
+    background:
+        radial-gradient(circle at 40% 30%, var(--accent-soft), transparent 70%),
+        var(--black-soft);
+    border: 2px solid var(--line-on-black);
+    color: var(--accent);
+}
+
+.motif {
+    width: 100%;
+    height: auto;
+}
+
+.headText {
+    flex: 1;
+    min-width: 0;
+}
+
+.name {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--bone-dim);
+    max-width: 56ch;
+}
+
+.count {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.56rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-faint);
+}
+
+/* --- mode cards --- */
+.modes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    height: 100%;
+    padding: 18px 16px 16px;
+    background: var(--black-soft);
+    border: 2px solid var(--line-on-black);
+    border-top: 3px solid var(--accent);
+    color: var(--bone);
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+}
+
+.cardIcon {
+    display: flex;
+    color: var(--accent);
+}
+
+.cardTop {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.cardName {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--accent);
+}
+
+.cardTag {
+    font-size: 0.56rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-faint);
+    white-space: nowrap;
+}
+
+.cardBlurb {
+    flex: 1;
+    font-size: 0.74rem;
+    line-height: 1.6;
+    color: var(--bone-dim);
+}
+
+.cardCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+}
+
+.cardCta em {
+    font-style: normal;
+    color: var(--bone-faint);
+}
+
+.card:hover .cardCta::after {
+    content: "→";
+    animation: nudge 0.6s ease infinite;
+}
+
+@keyframes nudge {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+/* --- records strip --- */
+.strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 22px;
+    padding: 16px 12px;
+    background: var(--black-soft);
+    border: 2px solid var(--line-on-black);
+}
+
+.fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.fact b {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1;
+    color: var(--bone);
+}
+
+.fact span {
+    font-size: 0.52rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--bone-dim);
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .modes {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 12px;
+        padding: 14px;
+    }
+
+    .cardIcon {
+        flex: 0 0 auto;
+    }
+
+    .cardTop {
+        flex: 1;
+    }
+
+    .cardBlurb {
+        flex: 1 0 100%;
+    }
+
+    .cardCta {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .head {
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    .art {
+        flex-basis: 82px;
+        padding: 12px 8px;
+    }
+
+    .strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px 8px;
+    }
+}

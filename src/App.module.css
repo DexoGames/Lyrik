@@ -1,0 +1,78 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.centre {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 60px var(--gutter);
+    text-align: center;
+}
+
+.centreText {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    max-width: 42ch;
+    color: var(--bone-dim);
+}
+
+/* three bars bouncing like a level meter */
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 34px;
+}
+
+.bars i {
+    display: block;
+    width: 8px;
+    height: 100%;
+    background: var(--accent);
+    transform-origin: bottom;
+    animation: meter 0.9s ease-in-out infinite;
+}
+
+.bars i:nth-child(2) {
+    animation-delay: 0.15s;
+    opacity: 0.75;
+}
+
+.bars i:nth-child(3) {
+    animation-delay: 0.3s;
+    opacity: 0.5;
+}
+
+@keyframes meter {
+    0%, 100% { transform: scaleY(0.28); }
+    50% { transform: scaleY(1); }
+}
+
+.failTitle {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--bad);
+}
+
+.code {
+    display: inline-block;
+    padding: 9px 14px;
+    background: var(--black-soft);
+    border: 2px solid var(--line-strong);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.detail {
+    font-size: 0.62rem;
+    color: var(--bone-faint);
+    max-width: 46ch;
+}

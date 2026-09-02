@@ -1,0 +1,320 @@
+{
+  "artist": "The Beatles",
+  "slug": "the-beatles",
+  "note": "Officially released Beatles recordings: the 13 UK studio LPs, Magical Mystery Tour, the four new Yellow Submarine songs, the non-album singles and EP tracks collected on Past Masters, and the three Anthology-era singles. Titles/albums/years only - lyric text is fetched at build time and never stored in this repo.",
+  "skip": [
+    "Flying",
+    "Revolution 9",
+    "Dig It",
+    "Maggie Mae",
+    "Wild Honey Pie"
+  ],
+  "releases": [
+    {
+      "album": "Please Please Me",
+      "year": 1963,
+      "tracks": [
+        "I Saw Her Standing There",
+        "Misery",
+        "Anna (Go to Him)",
+        "Chains",
+        "Boys",
+        "Ask Me Why",
+        "Please Please Me",
+        "Love Me Do",
+        "P.S. I Love You",
+        "Baby It's You",
+        "Do You Want to Know a Secret",
+        "A Taste of Honey",
+        "There's a Place",
+        "Twist and Shout"
+      ]
+    },
+    {
+      "album": "With the Beatles",
+      "year": 1963,
+      "tracks": [
+        "It Won't Be Long",
+        "All I've Got to Do",
+        "All My Loving",
+        "Don't Bother Me",
+        "Little Child",
+        "Till There Was You",
+        "Please Mister Postman",
+        "Roll Over Beethoven",
+        "Hold Me Tight",
+        "You Really Got a Hold on Me",
+        "I Wanna Be Your Man",
+        "Devil in Her Heart",
+        "Not a Second Time",
+        "Money (That's What I Want)"
+      ]
+    },
+    {
+      "album": "A Hard Day's Night",
+      "year": 1964,
+      "tracks": [
+        "A Hard Day's Night",
+        "I Should Have Known Better",
+        "If I Fell",
+        "I'm Happy Just to Dance with You",
+        "And I Love Her",
+        "Tell Me Why",
+        "Can't Buy Me Love",
+        "Any Time at All",
+        "I'll Cry Instead",
+        "Things We Said Today",
+        "When I Get Home",
+        "You Can't Do That",
+        "I'll Be Back"
+      ]
+    },
+    {
+      "album": "Beatles for Sale",
+      "year": 1964,
+      "tracks": [
+        "No Reply",
+        "I'm a Loser",
+        "Baby's in Black",
+        "Rock and Roll Music",
+        "I'll Follow the Sun",
+        "Mr. Moonlight",
+        "Kansas City / Hey-Hey-Hey-Hey!",
+        "Eight Days a Week",
+        "Words of Love",
+        "Honey Don't",
+        "Every Little Thing",
+        "I Don't Want to Spoil the Party",
+        "What You're Doing",
+        "Everybody's Trying to Be My Baby"
+      ]
+    },
+    {
+      "album": "Help!",
+      "year": 1965,
+      "tracks": [
+        "Help!",
+        "The Night Before",
+        "You've Got to Hide Your Love Away",
+        "I Need You",
+        "Another Girl",
+        "You're Going to Lose That Girl",
+        "Ticket to Ride",
+        "Act Naturally",
+        "It's Only Love",
+        "You Like Me Too Much",
+        "Tell Me What You See",
+        "I've Just Seen a Face",
+        "Yesterday",
+        "Dizzy Miss Lizzy"
+      ]
+    },
+    {
+      "album": "Rubber Soul",
+      "year": 1965,
+      "tracks": [
+        "Drive My Car",
+        "Norwegian Wood (This Bird Has Flown)",
+        "You Won't See Me",
+        "Nowhere Man",
+        "Think for Yourself",
+        "The Word",
+        "Michelle",
+        "What Goes On",
+        "Girl",
+        "I'm Looking Through You",
+        "In My Life",
+        "Wait",
+        "If I Needed Someone",
+        "Run for Your Life"
+      ]
+    },
+    {
+      "album": "Revolver",
+      "year": 1966,
+      "tracks": [
+        "Taxman",
+        "Eleanor Rigby",
+        "I'm Only Sleeping",
+        "Love You To",
+        "Here, There and Everywhere",
+        "Yellow Submarine",
+        "She Said She Said",
+        "Good Day Sunshine",
+        "And Your Bird Can Sing",
+        "For No One",
+        "Doctor Robert",
+        "I Want to Tell You",
+        "Got to Get You into My Life",
+        "Tomorrow Never Knows"
+      ]
+    },
+    {
+      "album": "Sgt. Pepper's Lonely Hearts Club Band",
+      "year": 1967,
+      "tracks": [
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "With a Little Help from My Friends",
+        "Lucy in the Sky with Diamonds",
+        "Getting Better",
+        "Fixing a Hole",
+        "She's Leaving Home",
+        "Being for the Benefit of Mr. Kite!",
+        "Within You Without You",
+        "When I'm Sixty-Four",
+        "Lovely Rita",
+        "Good Morning Good Morning",
+        "A Day in the Life"
+      ]
+    },
+    {
+      "album": "Magical Mystery Tour",
+      "year": 1967,
+      "tracks": [
+        "Magical Mystery Tour",
+        "The Fool on the Hill",
+        "Blue Jay Way",
+        "Your Mother Should Know",
+        "I Am the Walrus",
+        "Hello, Goodbye",
+        "Strawberry Fields Forever",
+        "Penny Lane",
+        "Baby, You're a Rich Man",
+        "All You Need Is Love"
+      ]
+    },
+    {
+      "album": "The Beatles (White Album)",
+      "year": 1968,
+      "tracks": [
+        "Back in the U.S.S.R.",
+        "Dear Prudence",
+        "Glass Onion",
+        "Ob-La-Di, Ob-La-Da",
+        "The Continuing Story of Bungalow Bill",
+        "While My Guitar Gently Weeps",
+        "Happiness Is a Warm Gun",
+        "Martha My Dear",
+        "I'm So Tired",
+        "Blackbird",
+        "Piggies",
+        "Rocky Raccoon",
+        "Don't Pass Me By",
+        "Why Don't We Do It in the Road?",
+        "I Will",
+        "Julia",
+        "Birthday",
+        "Yer Blues",
+        "Mother Nature's Son",
+        "Everybody's Got Something to Hide Except Me and My Monkey",
+        "Sexy Sadie",
+        "Helter Skelter",
+        "Long, Long, Long",
+        "Revolution 1",
+        "Honey Pie",
+        "Savoy Truffle",
+        "Cry Baby Cry",
+        "Good Night"
+      ]
+    },
+    {
+      "album": "Yellow Submarine",
+      "year": 1969,
+      "tracks": [
+        "Only a Northern Song",
+        "All Together Now",
+        "Hey Bulldog",
+        "It's All Too Much"
+      ]
+    },
+    {
+      "album": "Abbey Road",
+      "year": 1969,
+      "tracks": [
+        "Come Together",
+        "Something",
+        "Maxwell's Silver Hammer",
+        "Oh! Darling",
+        "Octopus's Garden",
+        "I Want You (She's So Heavy)",
+        "Here Comes the Sun",
+        "Because",
+        "You Never Give Me Your Money",
+        "Sun King",
+        "Mean Mr. Mustard",
+        "Polythene Pam",
+        "She Came In Through the Bathroom Window",
+        "Golden Slumbers",
+        "Carry That Weight",
+        "The End",
+        "Her Majesty"
+      ]
+    },
+    {
+      "album": "Let It Be",
+      "year": 1970,
+      "tracks": [
+        "Two of Us",
+        "Dig a Pony",
+        "Across the Universe",
+        "I Me Mine",
+        "Let It Be",
+        "I've Got a Feeling",
+        "One After 909",
+        "The Long and Winding Road",
+        "For You Blue",
+        "Get Back"
+      ]
+    },
+    {
+      "album": "Past Masters",
+      "year": 1988,
+      "tracks": [
+        "From Me to You",
+        "Thank You Girl",
+        "She Loves You",
+        "I'll Get You",
+        "I Want to Hold Your Hand",
+        "This Boy",
+        "Komm, Gib Mir Deine Hand",
+        "Sie Liebt Dich",
+        "Long Tall Sally",
+        "I Call Your Name",
+        "Slow Down",
+        "Matchbox",
+        "I Feel Fine",
+        "She's a Woman",
+        "Bad Boy",
+        "Yes It Is",
+        "I'm Down",
+        "Day Tripper",
+        "We Can Work It Out",
+        "Paperback Writer",
+        "Rain",
+        "Lady Madonna",
+        "The Inner Light",
+        "Hey Jude",
+        "Revolution",
+        "Don't Let Me Down",
+        "The Ballad of John and Yoko",
+        "Old Brown Shoe",
+        "You Know My Name (Look Up the Number)"
+      ]
+    },
+    {
+      "album": "Anthology singles",
+      "year": 1995,
+      "tracks": [
+        "Free as a Bird",
+        "Real Love"
+      ]
+    },
+    {
+      "album": "Now and Then",
+      "year": 2023,
+      "tracks": [
+        "Now and Then"
+      ]
+    }
+  ]
+}

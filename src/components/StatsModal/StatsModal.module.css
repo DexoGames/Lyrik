@@ -1,0 +1,103 @@
+.h {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin: 4px 0 14px;
+}
+
+.h:not(:first-child) {
+    margin-top: 26px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statN {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    line-height: 1;
+    color: var(--bone);
+}
+
+.statL {
+    margin-top: 4px;
+    font-size: 0.54rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--bone-dim);
+}
+
+.dist {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.distRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.distLabel {
+    flex: 0 0 62px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+}
+
+.barTrack {
+    flex: 1;
+    min-width: 0;
+}
+
+.bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3px 6px;
+    min-width: 1px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.bar[data-bucket="3"] { background: var(--w3); }
+.bar[data-bucket="4"] { background: var(--w4); }
+.bar[data-bucket="5"] { background: var(--w5); }
+.bar[data-bucket="6"] { background: var(--w6); }
+.bar[data-bucket="x"] { background: var(--wx); color: var(--bone); }
+
+.empty {
+    font-size: 0.76rem;
+    color: var(--bone-dim);
+}
+
+.note {
+    margin-top: 22px;
+    font-size: 0.58rem;
+    line-height: 1.6;
+    color: var(--bone-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}

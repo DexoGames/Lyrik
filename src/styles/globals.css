@@ -1,0 +1,203 @@
+:root {
+    /* --- brand: "Marker" — the magenta of a highlighter dragged across a
+       lyric sheet. Distinct from dexo orange and Slate velvet so Lyrik reads as
+       its own thing while keeping the family's black / cream / one-loud-accent
+       structure. --- */
+    --marker: #ff3d7f;
+    --marker-deep: #c81d59;
+    --marker-bright: #ff6f9d;
+    --marker-ink: #2a0512; /* text on marker */
+    --marker-rgb: 255, 61, 127;
+    --marker-veil: rgba(255, 61, 127, 0.14);
+
+    /* Family aliases: the shared dexo.games component vocabulary says
+       `--accent`, so Lyrik re-skins from the two lines above. Magenta is the
+       app's own colour — the shelf and the chrome outside any catalogue. */
+    --accent: var(--marker);
+    --accent-deep: var(--marker-deep);
+    --accent-ink: var(--marker-ink);
+    --accent-soft: var(--marker-veil);
+    /* the wash of stage light behind everything */
+    --glow: rgba(255, 61, 127, 0.13);
+
+    --black: #0d0d0d;
+    --black-soft: #171717; /* raised surfaces */
+    --black-soft-2: #202020; /* second-level raised surface */
+    --cream: #ece6db;
+    --cream-soft: #e2dccf;
+
+    --ink: #14130f; /* text on cream */
+    --ink-dim: #6b6657;
+    --bone: #ece6db; /* text on black */
+    --bone-dim: #8f897c;
+    --bone-faint: #5c584f; /* dimmest legible text on black */
+
+    --line-on-cream: rgba(20, 19, 15, 0.12);
+    --line-on-black: rgba(236, 230, 219, 0.1);
+    --line-strong: rgba(236, 230, 219, 0.22);
+
+    /* --- semantics: kept clear of the brand so "right" and "wrong" never
+       compete with the accent --- */
+    --good: #3fd97f;
+    --good-ink: #04230f;
+    --bad: #ff4d4d;
+    --bad-ink: #2a0606;
+    --gold: #e8b923;
+    --gold-ink: #3a2a02;
+
+    /* --- word-count ladder: 3 words is gold, 6 is scraping by. Used by the
+       score pips, the stats histogram and the share grid alike. --- */
+    --w3: #3fd97f;
+    --w4: #b8d94a;
+    --w5: #ffc83a;
+    --w6: #ff8a3a;
+    --wx: #6b6657;
+
+    --font-display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+
+    --radius: 0px; /* everything is square */
+    --maxw: 780px; /* the play column */
+    --nav-h: 56px;
+
+    /* safe-area aware page gutters (iPhone notch / home indicator) */
+    --gutter: 18px;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+}
+
+/* --- catalogue skins -------------------------------------------------------
+   One class per artist, applied to <html> while that catalogue is open, so the
+   nav rule, buttons, highlighter swipe and background wash all follow. Adding
+   an artist means adding a block here and a file in src/catalogues/. */
+
+.theme-beatles {
+    /* Granny Smith apple green. */
+    --accent: #8dc63f;
+    --accent-deep: #5fa028;
+    --accent-ink: #0f2a06;
+    --accent-soft: rgba(141, 198, 63, 0.14);
+    --glow: rgba(141, 198, 63, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* the play surface is a fixed board — never bounce-scroll it on iOS */
+    overscroll-behavior-y: none;
+}
+
+body {
+    font-family: var(--font-mono);
+    /* a stage-light wash of the current accent spilling from the top edge */
+    background:
+        radial-gradient(120% 80% at 50% -15%, var(--glow) 0%, transparent 60%),
+        var(--black);
+    transition: background-color 0.4s ease;
+    background-color: var(--black);
+    background-attachment: fixed;
+    color: var(--bone);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* --- self-hosted fonts (SIL OFL), shared with dexo.games --- */
+@font-face {
+    font-family: "Archivo Black";
+    src: url("/fonts/archivo-black-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/jetbrains-mono-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/jetbrains-mono-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/jetbrains-mono-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+img {
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    color: inherit;
+    /* kill the 300ms tap delay and the grey flash on mobile */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    font-family: inherit;
+}
+
+a {
+    color: var(--accent);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
+/* screen-reader-only, for live regions and icon-button labels */
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.page {
+    position: relative;
+    min-height: 100dvh;
+}
+
+/* motion carries meaning here, but is never the only carrier */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lyrik">
+  <rect width="64" height="64" fill="#0d0d0d"/>
+  <!-- the swipe of highlighter -->
+  <rect x="7" y="24" width="50" height="17" fill="#ff3d7f"/>
+  <!-- three words knocked out of it -->
+  <rect x="11" y="28" width="10" height="8" fill="#ece6db"/>
+  <rect x="24" y="28" width="17" height="8" fill="#ece6db"/>
+  <rect x="43" y="28" width="10" height="8" fill="#ece6db"/>
+  <!-- the song keeps going both ways -->
+  <rect x="1" y="30" width="3" height="4" fill="#8f897c"/>
+  <rect x="60" y="30" width="3" height="4" fill="#8f897c"/>
+</svg>
